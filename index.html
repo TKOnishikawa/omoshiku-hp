@@ -124,6 +124,8 @@ html.js .reveal.in{opacity:1;transform:none;}
 .hero-rtb span{font-size:0.74rem;color:rgba(244,239,231,0.5);display:inline-flex;align-items:center;gap:6px;}
 .hero-rtb span:not(:last-child)::after{content:'｜';color:rgba(255,255,255,0.14);margin-left:14px;}
 .hero-rtb b{color:var(--orbit-light);font-weight:700;}
+.hero-motto{margin-top:18px;max-width:620px;margin-left:auto;margin-right:auto;font-size:0.9rem;line-height:1.9;color:rgba(244,239,231,0.7);}
+.hero-motto b{color:var(--orbit-light);font-weight:700;}
 .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 .btn{font-family:var(--font-ja);font-weight:700;font-size:0.98rem;padding:16px 34px;border-radius:34px;display:inline-flex;align-items:center;gap:10px;transition:.28s;cursor:pointer;border:1px solid transparent;}
 .btn-primary{background:var(--grad-orbit);color:#fff;box-shadow:var(--shadow-orbit);}
@@ -150,6 +152,9 @@ html.js .reveal.in{opacity:1;transform:none;}
 .sec-eyebrow{font-family:var(--font-en);font-size:0.66rem;letter-spacing:0.28em;color:var(--text-muted);margin:8px 0 14px;}
 .section-dark .sec-eyebrow{color:rgba(244,239,231,0.5);}
 .sec-title{font-family:var(--font-en);font-weight:700;font-size:clamp(1.5rem,3.6vw,2.2rem);line-height:1.4;letter-spacing:0.01em;}
+.approach-title{white-space:nowrap;}
+.br-sp{display:none;}
+@media(max-width:760px){.approach-title{white-space:normal;}.br-sp{display:inline;}}
 .sec-title .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
 .sec-lead{font-size:0.98rem;color:var(--text-dim);margin-top:16px;line-height:1.95;}
 .section-dark .sec-lead{color:var(--text-on-dark-sub);}
@@ -466,6 +471,7 @@ html.js .reveal.in{opacity:1;transform:none;}
     <div class="hero-rtb">
       <span>外資コンサル ・ 開発マネージャー ・ マーケ責任者 ・ 新規事業立ち上げで <b>0→10億</b> を経験。</span>
     </div>
+    <div class="hero-motto">つくることは、ゴールじゃない。現場が自分で動かせて、数字が動くまで、<b>やりきる</b>のがモットーです。</div>
   </div>
   <div class="scroll-ind"><span>SCROLL</span><span class="bar"></span></div>
 </header>
@@ -497,7 +503,7 @@ html.js .reveal.in{opacity:1;transform:none;}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-no">02</div><div class="sec-eyebrow">APPROACH</div>
-      <h2 class="sec-title">技術と現場の&ldquo;あいだ&rdquo;を、<span class="accent">成果が出るまでつなぐ</span></h2>
+      <h2 class="sec-title approach-title">技術と現場の&ldquo;あいだ&rdquo;を、<br class="br-sp"><span class="accent">成果が出るまでつなぐ</span></h2>
       <p class="sec-lead">課題を整理し、実際に作り、現場で使われて成果が出るまで——多くのプロジェクトは、この技術と現場の &ldquo;あいだ&rdquo; を最後まで握る人がいなくて、途中で止まります。</p>
     </div>
 
