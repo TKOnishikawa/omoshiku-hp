@@ -87,7 +87,7 @@ html.js .reveal.in{opacity:1;transform:none;}
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;
-  background:radial-gradient(120% 120% at 50% 0%,#15111f 0%,var(--bg-hero) 55%);overflow:hidden;padding:120px 24px 90px;}
+  background:radial-gradient(100% 78% at 50% 46%,#191325 0%,#0d0b16 42%,var(--bg-hero) 66%);overflow:hidden;padding:120px 24px 90px;}
 .hero-orbits{position:absolute;inset:0;z-index:0;pointer-events:none;display:flex;align-items:center;justify-content:center;}
 .hero-orbits .ring{position:absolute;border-radius:50%;border:1px solid rgba(255,106,26,0.10);}
 .r1{width:540px;height:540px;animation:spin 38s linear infinite;}
@@ -117,12 +117,13 @@ html.js .reveal.in{opacity:1;transform:none;}
 .hero-sub{font-size:clamp(0.96rem,2.2vw,1.14rem);color:rgba(244,239,231,0.78);line-height:1.95;font-weight:300;max-width:600px;margin:0 auto 34px;}
 .hero-sub b{color:var(--orbit-light);font-weight:600;}
 /* hero value flow (what we do) */
-.hero-flow{display:flex;align-items:stretch;justify-content:center;gap:9px;flex-wrap:wrap;max-width:600px;margin:0 auto 32px;}
-.hero-flow .hf{flex:1;min-width:130px;background:rgba(255,255,255,0.045);border:1px solid var(--orbit-border);border-radius:13px;padding:14px 14px;text-align:center;}
-.hero-flow .hf .hf-n{font-family:var(--font-en);font-size:0.58rem;letter-spacing:0.1em;color:var(--orbit-light);font-weight:700;}
-.hero-flow .hf .hf-t{font-size:0.98rem;font-weight:700;color:#f6f1e9;margin-top:6px;}
-.hero-flow .hf-ar{display:flex;align-items:center;color:var(--orbit-light);font-size:1.05rem;font-weight:700;}
-@media(max-width:600px){.hero h1{white-space:normal;}.hero-flow{flex-direction:column;gap:8px;}.hero-flow .hf-ar{transform:rotate(90deg);align-self:center;}}
+.hero-flow{display:flex;align-items:stretch;justify-content:center;gap:8px;max-width:600px;margin:0 auto 32px;}
+.hero-flow .hf{flex:1;min-width:0;background:rgba(255,255,255,0.045);border:1px solid var(--orbit-border);border-radius:13px;padding:15px 8px;text-align:center;}
+.hero-flow .hf .hf-ph{font-family:var(--font-en);font-weight:800;font-size:1.18rem;color:#f6f1e9;display:flex;align-items:center;justify-content:center;gap:5px;line-height:1.2;}
+.hero-flow .hf .hf-ph .hf-no{color:var(--orbit-light);}
+.hero-flow .hf .hf-t{font-size:0.82rem;font-weight:500;color:rgba(244,239,231,0.7);margin-top:6px;}
+.hero-flow .hf-ar{display:flex;align-items:center;color:var(--orbit-light);font-size:1.05rem;font-weight:700;flex-shrink:0;}
+@media(max-width:600px){.hero h1{white-space:normal;}.hero-flow{gap:4px;}.hero-flow .hf{padding:13px 3px;}.hero-flow .hf .hf-ph{font-size:1.04rem;gap:3px;}.hero-flow .hf .hf-t{font-size:0.7rem;}.hero-flow .hf-ar{font-size:0.85rem;}}
 /* hero RTB (why us) */
 .hero-rtb{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.08);max-width:640px;margin-left:auto;margin-right:auto;}
 .hero-rtb span{font-size:0.78rem;color:rgba(244,239,231,0.55);text-align:center;}
@@ -276,42 +277,6 @@ html.js .reveal.in{opacity:1;transform:none;}
 .approach-close .ac-h .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
 .approach-close .ac-sub{font-size:0.9rem;color:var(--text-on-dark-sub);line-height:1.9;margin-top:13px;}
 .approach-close .ac-sub b{color:#f0e8df;font-weight:700;}
-/* ===== bridge v2 (evolved, mockup-style) ===== */
-.bridge-head{text-align:center;margin:6px 0 24px;}
-.bridge-head h3{font-family:var(--font-en);font-weight:800;font-size:clamp(1.35rem,3.2vw,1.95rem);color:#f6f1e9;line-height:1.4;}
-.bridge-head h3 .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
-.bridge-head .bh-line{width:64px;height:3px;background:var(--grad-orbit);border-radius:2px;margin:13px auto 13px;}
-.bridge-head p{font-size:0.92rem;color:var(--text-on-dark-sub);}
-.sb-node .sb-icon{width:56px;height:56px;margin:4px auto 13px;border:1.5px solid var(--orbit-border);border-radius:15px;display:flex;align-items:center;justify-content:center;background:rgba(236,94,22,0.07);}
-.sb-node .sb-icon svg{width:29px;height:29px;stroke:var(--orbit-light);fill:none;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;}
-.sb-node{text-align:center;}
-.sb-node .sb-stage,.sb-node h4{text-align:center;}
-.sb-node p{text-align:left;}
-.sb-no{margin-left:auto;margin-right:auto;}
-.sb-end .se-icon{width:50px;height:50px;margin:0 auto 11px;border:1.5px solid rgba(255,255,255,0.22);border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.sb-end .se-icon svg{width:26px;height:26px;stroke:rgba(244,239,231,0.85);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
-.bridge-progress{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:28px 0 0;}
-.bp-seg{border-radius:12px;padding:14px 16px;border:1px solid rgba(255,255,255,0.08);}
-.bp-seg .bp-h{display:flex;align-items:center;gap:9px;font-family:var(--font-en);font-weight:800;font-size:0.92rem;color:#fff;}
-.bp-seg .bp-h svg{width:20px;height:20px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-.bp-seg .bp-d{font-size:0.76rem;color:rgba(255,255,255,0.78);margin-top:7px;line-height:1.6;}
-.bp-seg.tech{background:linear-gradient(135deg,rgba(40,75,122,0.5),rgba(30,58,95,0.25));border-color:rgba(74,125,255,0.3);} .bp-seg.tech .bp-h svg{stroke:#7db0ff;}
-.bp-seg.bridge{background:linear-gradient(135deg,rgba(236,94,22,0.55),rgba(198,56,19,0.3));border-color:var(--orbit-border);} .bp-seg.bridge .bp-h svg{stroke:#ffb27a;}
-.bp-seg.field{background:linear-gradient(135deg,rgba(42,138,82,0.5),rgba(31,107,62,0.25));border-color:rgba(52,180,110,0.3);} .bp-seg.field .bp-h svg{stroke:#79e0a0;}
-.bridge-goal{display:flex;align-items:center;justify-content:center;gap:11px;margin:18px auto 0;max-width:660px;border:1.5px solid var(--orbit-border);border-radius:32px;padding:13px 26px;background:rgba(236,94,22,0.07);text-align:center;flex-wrap:wrap;}
-.bridge-goal svg{width:22px;height:22px;stroke:var(--orbit-light);fill:none;stroke-width:1.7;flex-shrink:0;}
-.bridge-goal .bg-l{font-family:var(--font-en);font-weight:800;color:var(--orbit-light);font-size:0.82rem;letter-spacing:0.04em;}
-.bridge-goal .bg-t{font-weight:700;color:#f6f1e9;font-size:0.95rem;}
-.sb-arrow-m{display:none;}
-@media(max-width:820px){
-  .bridge-progress{grid-template-columns:1fr;gap:8px;}
-  .sb-flow{position:relative;}
-  .sb-arrow-m{display:flex;align-items:center;justify-content:center;color:var(--orbit);font-size:1.2rem;font-weight:700;margin:-4px 0;}
-  .sb-end{flex-direction:column!important;text-align:center;padding:16px 18px!important;}
-  .sb-end .se-icon{margin-bottom:8px;}
-  .sb-node{padding:18px 20px;}
-  .sb-node p{text-align:center;}
-}
 @media(max-width:820px){
   .seam-bridge{grid-template-columns:1fr;gap:12px;}
   .sb-flow{grid-template-columns:1fr;}
@@ -496,11 +461,11 @@ html.js .reveal.in{opacity:1;transform:none;}
     <div class="hero-logo"><img src="assets/logo-dark.png" alt="オモシク — 想いと仕組みで面白く"></div>
     <h1 class="hero-maincopy">戦略・実装・定着を<span class="accent">一気通貫</span>。<br>成果が出るまで<span class="accent">やり切る</span>。</h1>
     <div class="hero-flow">
-      <div class="hf"><div class="hf-n">STEP 1 ・ 戦略</div><div class="hf-t">何を作るか</div></div>
+      <div class="hf"><div class="hf-ph"><span class="hf-no">①</span>戦略</div><div class="hf-t">何を作るか</div></div>
       <div class="hf-ar">→</div>
-      <div class="hf"><div class="hf-n">STEP 2 ・ 実装</div><div class="hf-t">実際につくる</div></div>
+      <div class="hf"><div class="hf-ph"><span class="hf-no">②</span>実装</div><div class="hf-t">実際につくる</div></div>
       <div class="hf-ar">→</div>
-      <div class="hf"><div class="hf-n">STEP 3 ・ 定着</div><div class="hf-t">使われて成果</div></div>
+      <div class="hf"><div class="hf-ph"><span class="hf-no">③</span>定着</div><div class="hf-t">使われて成果</div></div>
     </div>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">まずは相談する <span aria-hidden="true">→</span></a>
@@ -545,39 +510,21 @@ html.js .reveal.in{opacity:1;transform:none;}
       <p class="sec-lead">課題を整理し、実際に作り、現場で使われて成果が出るまで——多くのプロジェクトは、この技術と現場の &ldquo;あいだ&rdquo; を最後まで握る人がいなくて、途中で止まります。</p>
     </div>
 
-    <div class="bridge-head reveal">
-      <h3>技術と現場をつなぐ、<span class="accent">3つの役割</span></h3>
-      <div class="bh-line"></div>
-      <p>課題定義から実装、成果創出までを一気通貫で支援します。</p>
-    </div>
+    <p class="bridge-cap reveal">だから omoshiku は、その &ldquo;あいだ&rdquo; に立つ。<b>入口から出口まで、3つのステップで一気通貫に握ります。</b></p>
     <div class="seam-bridge reveal">
-      <div class="sb-end sb-tech">
-        <div class="se-icon"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></svg></div>
-        <div class="e-t">技術</div><div class="e-s">システム<br>ツール・データ</div>
-      </div>
+      <div class="sb-end sb-tech"><div class="e-t">戦略 / 技術</div><div class="e-s">事業戦略<br>システム・データ</div></div>
       <div class="sb-flow">
         <div class="sb-beam"></div>
-        <div class="sb-node"><div class="sb-no">1</div><div class="sb-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="11" height="15" rx="2"/><path d="M8 4V3h3v1"/><path d="M7 9h5M7 12h3"/><circle cx="16" cy="15" r="3.2"/><path d="m18.4 17.4 2.1 2.1"/></svg></div><span class="sb-stage">入口 ・ ORGANIZE</span><h4>「何を作るか」を、<br>一緒に決める</h4><p>課題を整理し、「本当に解くべき問題」に組み直す。部門をまたいで横串を刺す。ここが成否の9割。</p></div>
-        <div class="sb-arrow-m">↓</div>
-        <div class="sb-node"><div class="sb-no">2</div><div class="sb-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 8h14"/><polyline points="7 11 9 12.5 7 14"/><path d="M11.2 14h2.3"/><circle cx="18" cy="17.5" r="2.3"/><path d="M18 14.2v1M18 19.8v1M20.9 15.8l-.9.5M16.1 19.2l-.9.5M20.9 19.2l-.9-.5M16.1 15.8l-.9-.5"/></svg></div><span class="sb-stage">真ん中 ・ BUILD</span><h4>実際に、<br>かたちにする</h4><p>要件やアイデアを、その場で動くシステム・ツールへ。手を動かして、速く・ちゃんと作りきる。</p></div>
-        <div class="sb-arrow-m">↓</div>
-        <div class="sb-node"><div class="sb-no">3</div><div class="sb-icon"><svg viewBox="0 0 24 24"><path d="M4 20V5M4 20h13"/><polyline points="7 15 11 11 14 13.5 19 8"/><polyline points="16 8 19 8 19 11"/><circle cx="18" cy="18.5" r="2.6"/><path d="m16.8 18.5.9.9 1.5-1.7"/></svg></div><span class="sb-stage">出口 ・ DELIVER</span><h4>使われて、<br>成果が出るまで運ぶ</h4><p>作って終わりにしない。現場が自分で動かせて、数字が動くところまで伴走する。</p></div>
+        <div class="sb-node"><div class="sb-no">1</div><span class="sb-stage">入口 ・ ORGANIZE</span><h4>「何を作るか」を、一緒に決める</h4><p>課題を整理し、「本当に解くべき問題」に組み直す。部門をまたいで横串を刺す。ここが成否の9割。</p></div>
+        <div class="sb-node"><div class="sb-no">2</div><span class="sb-stage">真ん中 ・ BUILD</span><h4>実際に、かたちにする</h4><p>要件やアイデアを、その場で動くシステム・ツールへ。手を動かして、速く・ちゃんと作りきる。</p></div>
+        <div class="sb-node"><div class="sb-no">3</div><span class="sb-stage">出口 ・ DELIVER</span><h4>使われて、成果が出るまで運ぶ</h4><p>作って終わりにしない。現場が自分で動かせて、数字が動くところまで伴走する。</p></div>
       </div>
-      <div class="sb-end sb-field">
-        <div class="se-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c0-3.3 2.5-5 5.5-5s5.5 1.7 5.5 5"/><circle cx="17" cy="9.5" r="2.4"/><path d="M15.5 14.6c2.6.3 4.5 1.9 4.5 4.4"/></svg></div>
-        <div class="e-t">現場</div><div class="e-s">人・業務<br>組織</div>
-      </div>
+      <div class="sb-end sb-field"><div class="e-t">現場</div><div class="e-s">人・業務<br>組織</div></div>
     </div>
 
-    <div class="bridge-progress reveal">
-      <div class="bp-seg tech"><div class="bp-h"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 4v3M14 4v3M10 17v3M14 17v3M4 10h3M4 14h3M17 10h3M17 14h3"/></svg>技術</div><div class="bp-d">システム・ツール・データ</div></div>
-      <div class="bp-seg bridge"><div class="bp-h"><svg viewBox="0 0 24 24"><path d="M4 17V11a8 8 0 0 1 16 0v6"/><path d="M2 17h20"/><path d="M12 11v6"/></svg>橋渡し・実装</div><div class="bp-d">課題をかたちにし、価値を届ける</div></div>
-      <div class="bp-seg field"><div class="bp-h"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="2.6"/><path d="M4 19c0-3 2.2-4.6 5-4.6s5 1.6 5 4.6"/><circle cx="16.5" cy="9.5" r="2.2"/><path d="M15 14.4c2.4.3 4 1.7 4 4.1"/></svg>現場で成果</div><div class="bp-d">使われて、成果が出る状態へ</div></div>
-    </div>
-
-    <div class="bridge-goal reveal">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
-      <span class="bg-l">GOAL</span><span class="bg-t">現場で使われ、成果が出るまでを、やり切る。</span>
+    <div class="approach-close reveal">
+      <div class="ac-h">作ることは、ゴールじゃない。<br><span class="accent">現場が自分で動かせて、数字が動く</span>まで、やりきる。</div>
+      <div class="ac-sub">仕組みづくりは、あくまで手段。その先で <b>ちゃんと成果が出て、現場が「これなら自分たちでやれる」と思える</b>ところまで、つなぎ続けるのが omoshiku のこだわりです。</div>
     </div>
 
     <div class="compare reveal">
