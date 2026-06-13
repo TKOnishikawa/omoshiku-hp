@@ -109,6 +109,11 @@ html.js .reveal.in{opacity:1;transform:none;}
 .hero-eyebrow .tw{min-height:1em;border-right:2px solid var(--orbit-light);padding-right:3px;}
 .hero h1{font-family:var(--font-en);font-weight:800;font-size:clamp(2rem,6.2vw,3.9rem);line-height:1.2;letter-spacing:0.01em;color:#f6f1e9;margin-bottom:22px;white-space:nowrap;}
 .hero h1 .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-logo{margin:0 auto 28px;}
+.hero-logo img{width:min(560px,77vw);height:auto;display:block;margin:0 auto;filter:drop-shadow(0 8px 30px rgba(236,94,22,0.25));}
+.hero h1.hero-maincopy{font-family:var(--font-en);font-weight:800;font-size:clamp(1.45rem,3.7vw,2.45rem);line-height:1.5;letter-spacing:0.01em;color:#f6f1e9;margin-bottom:26px;white-space:normal;}
+.hero-maincopy .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+@media(max-width:600px){.hero-logo img{width:81vw;}}
 .hero-sub{font-size:clamp(0.96rem,2.2vw,1.14rem);color:rgba(244,239,231,0.78);line-height:1.95;font-weight:300;max-width:600px;margin:0 auto 34px;}
 .hero-sub b{color:var(--orbit-light);font-weight:600;}
 /* hero value flow (what we do) */
@@ -453,8 +458,8 @@ html.js .reveal.in{opacity:1;transform:none;}
   <img class="hero-mark" src="assets/orbit-mark.png" alt="" aria-hidden="true">
   <div class="hero-particles" id="heroParticles"></div>
   <div class="hero-inner">
-    <div class="hero-eyebrow"><span class="dot"></span><span class="tw" id="tw">STRATEGY × IMPLEMENTATION</span></div>
-    <h1>想いと仕組みで、<span class="accent">面白く</span>。</h1>
+    <div class="hero-logo"><img src="assets/logo-dark.png" alt="オモシク — 想いと仕組みで面白く"></div>
+    <h1 class="hero-maincopy">戦略を仕組みに落とし、成果まで<span class="accent">やりきる</span>。<br>現場が、<span class="accent">自走するまで</span>。</h1>
     <p class="hero-sub">「何を作るか」から「現場で使われ、成果が出る」まで。<br>戦略・実装・定着を、<b>一気通貫</b>で伴走します。</p>
     <div class="hero-flow">
       <div class="hf"><div class="hf-n">STEP 1 ・ 戦略</div><div class="hf-t">何を作るか</div></div>
@@ -470,7 +475,6 @@ html.js .reveal.in{opacity:1;transform:none;}
     <div class="hero-rtb">
       <span>外資コンサル ・ 開発マネージャー ・ マーケ責任者 ・ 新規事業立ち上げで <b>0→10億</b> を経験。</span>
     </div>
-    <div class="hero-motto">つくることは、ゴールじゃない。現場が自分で動かせて、数字が動くまで、<b>やりきる</b>のがモットーです。</div>
   </div>
   <div class="scroll-ind"><span>SCROLL</span><span class="bar"></span></div>
 </header>
