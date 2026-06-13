@@ -114,8 +114,10 @@ html.js .reveal.in{opacity:1;transform:none;}
 .hero h1.hero-maincopy{font-family:var(--font-en);font-weight:800;font-size:clamp(1.52rem,3.9vw,2.57rem);line-height:1.5;letter-spacing:0.01em;color:#f6f1e9;margin-bottom:26px;white-space:normal;}
 .hero-maincopy .accent{background:var(--grad-orbit);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
 @media(max-width:600px){.hero-logo img{width:81vw;}}
-.hero-sub{font-size:clamp(0.96rem,2.2vw,1.14rem);color:rgba(244,239,231,0.78);line-height:1.95;font-weight:300;max-width:600px;margin:0 auto 34px;}
+.hero-sub{font-size:0.9rem;color:rgba(244,239,231,0.6);line-height:1.85;font-weight:400;max-width:720px;margin:-6px auto 0;}
 .hero-sub b{color:var(--orbit-light);font-weight:600;}
+.hero-sub .hs-label{display:inline-block;color:var(--orbit-light);font-weight:700;font-size:0.78rem;border:1px solid var(--orbit-border);border-radius:6px;padding:1px 8px;margin-right:10px;}
+@media(max-width:600px){.hero-sub{font-size:0.8rem;}}
 /* hero value flow (what we do) */
 .hero-flow{display:flex;align-items:stretch;justify-content:center;gap:8px;max-width:600px;margin:0 auto 32px;}
 .hero-flow .hf{flex:1;min-width:0;background:rgba(255,255,255,0.045);border:1px solid var(--orbit-border);border-radius:13px;padding:15px 8px;text-align:center;}
@@ -463,17 +465,13 @@ html.js .reveal.in{opacity:1;transform:none;}
   <div class="hero-inner">
     <div class="hero-logo"><img src="assets/logo-dark.png" alt="オモシク — 想いと仕組みで面白く"></div>
     <h1 class="hero-maincopy"><span class="accent">戦略・実装・定着</span>を<span class="accent">一気通貫</span>。<br>成果が出るまで<span class="accent">やり切る</span>。</h1>
+    <p class="hero-sub"><span class="hs-label">支援テーマ</span>営業 / マーケ DX ・ データドリブン化 ・ LTV戦略 ・ AI活用</p>
     <div class="hero-flow">
       <div class="hf"><div class="hf-ph"><span class="hf-no">①</span>戦略</div><div class="hf-t">何を作るか</div></div>
       <div class="hf-ar">→</div>
       <div class="hf"><div class="hf-ph"><span class="hf-no">②</span>実装</div><div class="hf-t">実際につくる</div></div>
       <div class="hf-ar">→</div>
       <div class="hf"><div class="hf-ph"><span class="hf-no">③</span>定着</div><div class="hf-t">使われて成果</div></div>
-    </div>
-    <div class="hero-tags">
-      <span>営業 / マーケ DX支援</span>
-      <span>データドリブン支援</span>
-      <span>AI活用支援</span>
     </div>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">まずは相談する <span aria-hidden="true">→</span></a>
