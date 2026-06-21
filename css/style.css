@@ -126,7 +126,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hero-trust-logo{font-family:var(--font-en);font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--text-mut);
   filter:grayscale(1);transition:color .2s}
 .hero-trust-logo:hover{color:var(--text-dim)}
-.hero-chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 24px}
+.hero-chips{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 32px}
 .chip{font-size:.74rem;font-weight:700;color:var(--accent-soft);background:rgba(255,122,24,.08);
   border:1px solid var(--border-accent);border-radius:8px;padding:5px 12px}
 .chip-x{color:var(--text-mut);font-size:.8rem}
@@ -224,6 +224,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   padding:26px 24px;margin-bottom:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
 .omoshiku-feature .fail-col-tag{color:var(--accent-soft);font-size:.86rem}
 .omoshiku-feature .fail-conclusion{font-size:1.16rem;margin-top:2px}
+
+/* 矢羽プロセス図 (戦略→実装→定着→成果) — オレンジ矢羽+白文字 */
+.proc{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
+.proc-step{background:var(--grad-accent);color:#fff;font-weight:800;font-size:.96rem;letter-spacing:.05em;line-height:1;
+  padding:12px 24px 12px 30px;
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
+.proc-step:first-child{padding-left:22px;
+  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%)}
 
 /* ---- 03 Strengths ---- */
 .strength-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
@@ -341,8 +349,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .pain-card:hover{transform:translateY(-4px);border-color:var(--border-accent);background:var(--surface-2)}
 .pain-ico{flex-shrink:0;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;color:var(--accent);
   background:rgba(255,122,24,.1);border:1px solid var(--border-accent)}
-.pain-card p{font-size:.92rem;font-weight:500;line-height:1.55}
-.pain-foot{text-align:center;margin-top:var(--s6);font-size:1rem;font-weight:700;color:var(--text-dim)}
+.pain-card p{font-size:.92rem;font-weight:500;line-height:1.72}
+.pain-foot{text-align:center;margin-top:var(--s6);font-size:1rem;font-weight:700;color:var(--text-dim);line-height:1.85}
 
 /* ---- 10 CTA ---- */
 .section-cta{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--navy) 0%,#120d12 100%)}
@@ -468,6 +476,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pcard-ico svg{height:38px;width:auto}
   .pcard-title{font-size:1rem}
   .pcard-desc{line-height:1.7}
+
+  /* 矢羽プロセス図: モバイルは縮めて1行に */
+  .proc{gap:3px}
+  .proc-step{font-size:.84rem;padding:9px 15px 9px 21px;letter-spacing:.02em}
+  .proc-step:first-child{padding-left:13px}
 }
 @media(max-width:400px){
   .about-cards{grid-template-columns:1fr}

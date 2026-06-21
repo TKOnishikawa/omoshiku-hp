@@ -105,7 +105,7 @@
     if (!hasGSAP) return;
     document.querySelectorAll(selector).forEach(function (el) {
       gsap.from(el, Object.assign({
-        y: 38, opacity: 0, duration: 0.7, ease: EASE.snappy,
+        y: 38, opacity: 0, duration: 0.7, ease: EASE.snappy, clearProps: "transform",
         scrollTrigger: { trigger: el, start: "top 85%" }
       }, vars || {}));
     });
@@ -114,7 +114,7 @@
     if (!hasGSAP) return;
     document.querySelectorAll(container).forEach(function (box) {
       gsap.from(box.querySelectorAll(items), Object.assign({
-        y: 40, opacity: 0, duration: 0.6, stagger: 0.1, ease: EASE.snappy,
+        y: 40, opacity: 0, duration: 0.6, stagger: 0.1, ease: EASE.snappy, clearProps: "transform",
         scrollTrigger: { trigger: box, start: "top 82%" }
       }, vars || {}));
     });
