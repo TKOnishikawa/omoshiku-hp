@@ -229,8 +229,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .proc{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
 .proc-step{background:var(--grad-accent);color:#fff;font-weight:800;font-size:.96rem;letter-spacing:.05em;line-height:1;
   padding:12px 24px 12px 30px;
+  -webkit-clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%);
   clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
 .proc-step:first-child{padding-left:22px;
+  -webkit-clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%);
   clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%)}
 
 /* ---- 03 Strengths ---- */
