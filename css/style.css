@@ -524,12 +524,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pain-card{flex-direction:row}
 
   /* compact cards on mobile: icon inline-left (縦スクロール削減) */
-  .service-card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;padding:18px 18px}
-  .service-ico{grid-column:1;grid-row:1/3;margin-bottom:0;width:46px;height:46px;align-self:center}
-  .service-en{grid-column:2;grid-row:1;align-self:end}
-  .service-jp{grid-column:2;grid-row:2;align-self:start;margin-bottom:0}
-  .service-list{grid-column:1/3;grid-row:3;margin-top:14px;margin-bottom:16px}
-  .service-more{grid-column:1/3;grid-row:4}
+  /* スマホ: アイコン＋見出しを横並び → 説明 → 支援例 の順 */
+  .service-card{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"ico jp" "desc desc" "ex ex" "list list";column-gap:14px;align-items:center;padding:18px 18px}
+  .service-ico{grid-area:ico;margin-bottom:0;width:46px;height:46px}
+  .service-jp{grid-area:jp;margin-bottom:0}
+  .service-desc{grid-area:desc;margin:12px 0 10px}
+  .service-ex{grid-area:ex;margin-bottom:6px}
+  .service-list{grid-area:list;margin:0}
 
   .about-top{justify-content:center}
 
