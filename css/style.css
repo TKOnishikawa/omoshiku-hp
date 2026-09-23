@@ -514,9 +514,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .method-steps{gap:4px}
   .method-step{gap:14px;padding:8px 0}
   /* スマホ: 番号は大項目側（①②③）。1フェーズ1工程なので工程の丸数字は消す */
-  .method-list{counter-reset:phase}
-  .method-phase{counter-increment:phase}
-  .method-phase-name::before{content:counter(phase,circled-decimal) " ";font-family:var(--font-ja)}
+  /* circled-decimal は Chrome で「1」に落ちるので丸数字を直書き */
+  .method-phase:nth-child(1) .method-phase-name::before{content:"① "}
+  .method-phase:nth-child(2) .method-phase-name::before{content:"② "}
+  .method-phase:nth-child(3) .method-phase-name::before{content:"③ "}
   .method-num{display:none}
   .method-step{gap:0}
   .method-step:not(:last-child)::after{content:none}
