@@ -197,8 +197,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 /* ---- 02 Our Approach（仕組みだけではDXは回らない） ---- */
 .section-approach{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%)}
-.section-head--center{margin-left:auto;margin-right:auto;text-align:center}
-.approach-stack{display:flex;flex-direction:column;gap:18px;max-width:880px;margin:0 auto}
+/* 他セクションと同じ左寄せ。カードは container 幅いっぱい */
+.approach-stack{display:flex;flex-direction:column;gap:18px}
 .apc{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));border:1px solid var(--border);
   border-radius:var(--r-lg);padding:20px 28px 26px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
 .apc-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
@@ -248,10 +248,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .apc-row-sub{font-size:.88rem;color:var(--text-dim);text-align:right}
 .apc-row-chev{color:var(--accent)}
 /* OUR OUTCOME */
-.approach-outcome{position:relative;text-align:center;max-width:880px;margin:34px auto 0;padding-top:46px}
-.approach-outcome::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(100%,560px);height:1px;
-  background:linear-gradient(90deg,transparent,rgba(255,122,24,.6),transparent)}
-.approach-outcome-arrow{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:0;height:0;
+.approach-outcome{position:relative;text-align:left;margin:34px 0 0;padding-top:46px}
+.approach-outcome::before{content:"";position:absolute;left:0;top:0;width:min(100%,560px);height:1px;
+  background:linear-gradient(90deg,rgba(255,122,24,.6),transparent)}
+.approach-outcome-arrow{position:absolute;left:28px;top:0;transform:translate(-50%,-50%);width:0;height:0;
   border-left:18px solid transparent;border-right:18px solid transparent;border-top:16px solid var(--accent);
   filter:drop-shadow(0 0 12px rgba(255,110,20,.9))}
 .approach-outcome .section-label{margin:0 0 12px;color:var(--accent-soft)}
