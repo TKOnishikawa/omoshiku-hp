@@ -122,10 +122,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hero-title{font-family:var(--font-ja);font-weight:900;font-size:clamp(1.62rem,3.05vw,2.6rem);line-height:1.36;letter-spacing:-.01em;margin-bottom:20px}
 .hero-title .hl{display:block}
 /* メインコピーは PC/スマホとも1行固定（コンテナ幅に対して字数ぶんの上限で縮小）
-   実測: 1行目=13.94em相当 → 100/13.94≒7.17cqw が限界。6.9cqw で余白を確保 */
+   実測: 最長行「成果と夢中が回り続ける組織へ。」≒14.9em → 100/14.9≒6.7cqw が限界。6.45cqw で余白を確保 */
 @supports (font-size:1cqw){
   .hero-text{container-type:inline-size}
-  .hero-title{font-size:clamp(.95rem,6.9cqw,2.6rem)}
+  .hero-title{font-size:clamp(.95rem,6.45cqw,2.6rem)}  /* 2行目15字（≒14.9em）が収まる上限 */
   .hero-title .hl{white-space:nowrap}
 }
 .hero-sub{font-size:clamp(.92rem,1.1vw,1.02rem);color:var(--text-dim);line-height:1.95;word-break:auto-phrase;line-break:strict}
