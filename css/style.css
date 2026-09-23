@@ -9,7 +9,7 @@
   --grad-accent:linear-gradient(135deg,#ff8a1e 0%,#ff531c 50%,#f53a16 100%);
   --grad-text:linear-gradient(120deg,#ffa83f 0%,#ff6516 52%,#f53a16 100%);
   --grad-orbit:radial-gradient(circle,rgba(255,110,20,.32) 0%,rgba(245,58,22,.10) 42%,transparent 68%);
-  --text:#f3efe9; --text-dim:rgba(243,239,233,.66); --text-mut:rgba(243,239,233,.40);
+  --text:#f3efe9; --text-dim:rgba(243,239,233,.66); --text-mut:rgba(243,239,233,.58);
   --border:rgba(255,255,255,.08); --border-2:rgba(255,255,255,.14); --border-accent:rgba(255,122,24,.34);
   --accent-glow:rgba(255,122,24,.18); --accent-glow-strong:rgba(255,122,24,.4);
 
@@ -42,7 +42,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   white-space:nowrap;flex-wrap:wrap;line-height:1.3;text-align:center}
 .btn-arrow{transition:transform .25s}
 .btn:hover .btn-arrow{transform:translateX(4px)}
-.btn-primary{background:var(--grad-accent);color:#fff;box-shadow:var(--shadow-accent)}
+.btn-primary{background:var(--grad-accent);color:var(--navy);box-shadow:var(--shadow-accent)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 46px rgba(255,90,31,.42)}
 .btn-outline{background:rgba(255,255,255,.02);color:var(--text);border:1.5px solid var(--border-2)}
 .btn-outline:hover{border-color:var(--accent);color:#fff;transform:translateY(-2px)}
@@ -74,7 +74,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav-links a:hover,.nav-links a.active{color:var(--text)}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
 .nav-cta{display:flex;align-items:center;gap:10px}
-.hamburger{display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--border);flex-direction:column;
+.hamburger{display:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--border);flex-direction:column;
   align-items:center;justify-content:center;gap:5px;margin-left:auto}
 .hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
 .hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -122,10 +122,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hero-title{font-family:var(--font-ja);font-weight:900;font-size:clamp(1.62rem,3.05vw,2.6rem);line-height:1.36;letter-spacing:-.01em;margin-bottom:20px}
 .hero-title .hl{display:block}
 /* メインコピーは PC/スマホとも1行固定（コンテナ幅に対して字数ぶんの上限で縮小）
-   実測: 1行目=13.94em相当 → 100/13.94≒7.17cqw が限界。6.9cqw で余白を確保 */
+   実測: 最長行「成果と夢中が回り続ける組織へ。」≒14.9em → 100/14.9≒6.7cqw が限界。6.45cqw で余白を確保 */
 @supports (font-size:1cqw){
   .hero-text{container-type:inline-size}
-  .hero-title{font-size:clamp(.95rem,6.9cqw,2.6rem)}
+  .hero-title{font-size:clamp(.95rem,6.45cqw,2.6rem)}  /* 2行目15字（≒14.9em）が収まる上限 */
   .hero-title .hl{white-space:nowrap}
 }
 .hero-sub{font-size:clamp(.92rem,1.1vw,1.02rem);color:var(--text-dim);line-height:1.95;word-break:auto-phrase;line-break:strict}
@@ -264,12 +264,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .service-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 26px;
   display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
 .service-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad-accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.service-card:hover{transform:translateY(-6px);border-color:var(--border-accent);box-shadow:var(--shadow-md)}
+.service-card:hover{border-color:var(--border-accent);box-shadow:var(--shadow-md)}
 .service-card:hover::before{transform:scaleX(1)}
 .service-ico{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;color:#fff;background:var(--grad-accent);
   box-shadow:var(--shadow-accent);margin-bottom:16px}
 .service-en{font-family:var(--font-en);font-weight:700;font-size:1.16rem;letter-spacing:.01em;margin-bottom:2px}
-.service-jp{font-size:.92rem;font-weight:700;color:var(--accent-soft);margin-bottom:18px}
+.service-jp{font-size:1.15rem;font-weight:800;color:var(--text);margin-bottom:14px}
 .service-list{display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
 .service-list li{position:relative;padding-left:22px;font-size:.88rem;color:var(--text-dim);line-height:1.6}
 .service-list li::before{content:"";position:absolute;left:0;top:.55em;width:7px;height:7px;border-radius:2px;background:var(--grad-accent)}
@@ -281,8 +281,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .theme-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .theme-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:21px 22px;
   display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
-.theme-card:hover{transform:translateY(-5px);border-color:var(--border-accent);box-shadow:var(--shadow-md)}
-.theme-tag{align-self:flex-start;font-size:.74rem;font-weight:700;color:#fff;background:var(--grad-accent);
+.theme-card:hover{border-color:var(--border-accent);box-shadow:var(--shadow-md)}
+.theme-tag{align-self:flex-start;font-size:.74rem;font-weight:800;color:var(--navy);background:var(--grad-accent);
   border-radius:8px;padding:5px 14px;margin-bottom:16px}
 .theme-headline{font-size:1.18rem;font-weight:800;margin-bottom:9px;line-height:1.45}
 .theme-desc{font-size:.86rem;color:var(--text-dim);line-height:1.62;margin-bottom:12px}
@@ -305,7 +305,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 /* ---- 06 Method ---- */
 .section-method{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%)}
-.method-list{position:relative;display:flex;flex-direction:column;gap:30px;max-width:940px;margin:0 auto}
+.method-list{position:relative;display:flex;flex-direction:column;gap:30px;max-width:940px;margin:0}
 /* 3フェーズ（決める / 作る / 根づかせる）。縦線はフェーズごとに色を変える */
 .method-phase{position:relative;display:grid;grid-template-columns:172px 1fr;column-gap:30px;align-items:start;--phase:var(--accent)}
 .method-phase[data-phase="decide"]{--phase:#ffb673}
@@ -373,7 +373,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .case-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:21px 22px;
   display:flex;flex-direction:column;gap:9px;transition:transform .25s,border-color .25s}
-.case-card:hover{transform:translateY(-6px);border-color:var(--border-accent)}
+.case-card:hover{border-color:var(--border-accent)}
 .case-title{font-size:1.06rem;font-weight:700;line-height:1.5}
 .case-tag{align-self:flex-start;font-size:.72rem;font-weight:700;color:var(--accent-soft);
   background:rgba(255,122,24,.1);border:1px solid var(--border-accent);border-radius:6px;padding:3px 10px}
@@ -391,7 +391,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .pain-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:24px 22px;
   display:flex;align-items:center;gap:16px;transition:transform .25s,border-color .25s,background .25s}
-.pain-card:hover{transform:translateY(-4px);border-color:var(--border-accent);background:var(--surface-2)}
+.pain-card:hover{border-color:var(--border-accent);background:var(--surface-2)}
 .pain-ico{flex-shrink:0;width:48px;height:48px;border-radius:12px;display:grid;place-items:center;color:var(--accent);
   background:rgba(255,122,24,.1);border:1px solid var(--border-accent)}
 .pain-card p{font-size:.92rem;font-weight:500;line-height:1.72}
@@ -463,7 +463,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
    ========================================================= */
 @media(max-width:1024px){
   .hero-inner{grid-template-columns:1fr;column-gap:0;row-gap:34px;
-    grid-template-areas:"text" "visual" "cta"}
+    grid-template-areas:"text" "cta" "visual"}
   .hero-text{text-align:center}
   .hero-cta-group{justify-content:center;margin-top:0}
   .hero-meta{margin-top:0}
@@ -475,7 +475,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @media(max-width:860px){
   .nav-links{display:none}
   .nav-inner{gap:10px}
-  /* スマホでも相談ボタンを残す。ハンバーガーのすぐ左 */
+  /* 相談ボタンはハンバーガーのすぐ左 */
   .nav-cta{display:flex;margin-left:auto;margin-right:0}
   .nav-cta .btn{padding:9px 14px;font-size:.8rem;white-space:nowrap}
   .hamburger{display:flex;margin-left:0;flex-shrink:0}
@@ -499,19 +499,26 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .form-grid{grid-template-columns:1fr}
   .cta-actions .btn{min-width:0;width:100%}
   .hero-trust{gap:14px}
-  .method-list{gap:24px}
-  .method-phase{grid-template-columns:1fr;column-gap:0}
-  /* 縦線(left:21px)を避けてラベルもステップ見出しの位置に揃える */
-  .method-phase-head{position:relative;padding-top:0;text-align:left;padding-left:62px}
-  .method-phase-name{font-size:1.06rem}
-  .method-phase-note{padding:8px 0 4px 62px}
-  .method-step:not(:last-child)::after{left:21px;top:31px;bottom:-39px}
-  /* 丸44px + padding9px → 中心=31px / フェーズ間 gap=24px */
-  .method-phase:not(:last-child) .method-steps>.method-step:last-child::after{left:21px;top:31px;bottom:0}
-  .method-phase:not(:first-child) .method-phase-head::before{content:"";position:absolute;left:21px;top:-24px;bottom:0;width:2px;background:var(--phase)}
-  .method-phase:not(:first-child) .method-phase-note::before{left:21px;top:0;bottom:-31px}
-  .method-num{width:44px;height:44px;font-size:1.1rem}
-  .method-step{gap:18px}
+  /* スマホ: フェーズを枠にして、ステップをその中へ（PCの左ラベル列の役割を枠線が担う）
+     フェーズ間の線はつながない。線は枠内のステップ同士だけ */
+  .method-list{gap:14px}
+  .method-phase{grid-template-columns:1fr;column-gap:0;padding:16px 16px 14px;border-radius:16px;
+    background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--phase)}
+  .method-phase-head{position:relative;padding:0;text-align:left;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .method-phase-bar{display:none}
+  .method-phase-name{display:inline;font-size:1.12rem}
+  .method-phase-en{display:inline;margin:0;font-size:.6rem}
+  .method-phase-note{padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:6px;font-size:.84rem}
+  .method-phase-note::before,.method-phase-head::before{content:none}
+  .method-steps{gap:4px}
+  .method-step{gap:14px;padding:8px 0}
+  .method-num{width:40px;height:40px;font-size:1rem}
+  .method-body{padding-top:4px}
+  .method-body h3{font-size:1.02rem}
+  .method-body p{font-size:.86rem}
+  /* 丸40px + padding8px → 中心=28px / li間gap=4px → 次の中心まで 36px */
+  .method-step:not(:last-child)::after{left:19px;top:28px;bottom:-36px}
+  .method-phase:not(:last-child) .method-steps>.method-step:last-child::after{content:none}
   .contact-form{padding:24px}
   .pain-card{flex-direction:row}
 
@@ -563,3 +570,95 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .orbit-lines,.orbit-ring,.orbit-node-inner{animation:none!important}
 }
+
+
+/* ===== preview: アストラ推奨（判断不要分）===== */
+/* 本文の可読性: 13.4〜13.8px → 15px */
+.theme-desc,.case-desc,.service-list li,.apc-stalls li,.about-card p{font-size:.9375rem;line-height:1.8}
+.service-en{font-size:.78rem;font-weight:600;letter-spacing:.1em;color:var(--text-dim);margin-bottom:4px}
+.apc-reality-sub{display:inline-block;margin-top:10px;font-size:.95rem;font-weight:500;color:var(--text-dim)}
+.approach-outcome-sub{margin-top:14px;font-size:1rem;color:var(--text-dim);line-height:1.8}
+.apc-row-sub{text-align:left}
+.apc-row{grid-template-columns:auto auto 1fr auto}
+/* PC: 課題2枚を横並び・ベン図と結論は1行幅 */
+@media (min-width:1025px){
+  .approach-stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  .apc--reality,.apc--solution{grid-column:1/-1}
+  .apc-issue{grid-template-columns:1fr;gap:14px}
+  .apc-ico{width:60px;height:60px;border-radius:14px}
+  .apc-ico svg{width:30px;height:30px}
+  .apc-reality{flex-direction:row;justify-content:center;align-items:center;gap:40px}
+  .venn{width:300px;flex-shrink:0}
+  .apc-reality-copy{text-align:left}
+}
+/* Contact: 送信前に相談の見通しを見せる */
+.cta-logo{width:min(220px,56vw);margin-bottom:22px}
+.contact-head{max-width:720px;margin:0 auto 26px;text-align:center}
+.contact-title{font-size:clamp(1.3rem,2.4vw,1.8rem);font-weight:900;line-height:1.5;margin-bottom:12px}
+.contact-lead{font-size:.95rem;line-height:1.9;color:var(--text-dim)}
+.contact-lead b{color:var(--text)}
+.form-group input,.form-group textarea{font-size:1rem}
+.consent-label{min-height:44px}.consent-label input{flex-shrink:0}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent-soft);outline-offset:4px}
+@media (max-width:640px){
+  .footer-links a{display:inline-flex;align-items:center;min-height:40px}
+  .apc-stall-tag{min-width:58px}
+  .contact-head{text-align:left}
+}
+
+
+/* ===== preview: D2〜D9 ===== */
+.hero-cta-note{margin-top:12px;font-size:.84rem;color:var(--text-dim)}
+/* 01b こんな状態から */
+.section-start{padding-top:0;padding-bottom:0}
+.section-start .container{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-top:22px;padding-bottom:22px;
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.start-label{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:var(--accent-soft);white-space:nowrap}
+.start-list{list-style:none;display:flex;gap:10px 28px;flex-wrap:wrap;margin:0;padding:0}
+.start-list li{position:relative;padding-left:16px;font-size:.92rem;color:var(--text-dim);line-height:1.7}
+.start-list li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.start-list b{color:var(--text);font-weight:700}
+/* 03 Proof */
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proof-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 26px;display:flex;flex-direction:column;gap:12px}
+.proof-title{font-size:1.14rem;font-weight:800;line-height:1.5}
+.proof-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:4px 0 0}
+.proof-dl dt{font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--accent-soft);padding-top:3px;white-space:nowrap}
+.proof-dl dd{margin:0;font-size:.92rem;line-height:1.75;color:var(--text-dim)}
+.proof-dl dd b{color:var(--text);font-weight:700}
+.proof-note{margin-top:16px;font-size:.8rem;color:var(--text-mut);line-height:1.7}
+.tbd{display:inline-block;background:#ffe599;color:#1c1b18;font-size:.74rem;font-weight:800;border-radius:4px;padding:1px 7px;margin:0 4px}
+/* 04 解決できる課題 */
+.service-desc{font-size:.95rem;line-height:1.8;color:var(--text-dim);margin-bottom:14px}
+.service-ex{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:var(--accent-soft);margin-bottom:6px}
+/* 05 Method: 3工程 */
+.method-ask{margin-top:8px;font-size:.84rem;color:var(--text-mut)}
+.method-ask b{color:var(--accent-soft);font-weight:700}
+/* 08 How to start */
+.flow-steps{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flow-steps li{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px}
+.flow-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-mono);font-weight:800;color:var(--navy);background:var(--grad-accent)}
+.flow-steps h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.flow-steps p{font-size:.88rem;line-height:1.75;color:var(--text-dim)}
+.flow-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.flow-fact{border:1px solid var(--border-accent);border-radius:var(--r-md);padding:16px 18px;background:rgba(255,122,24,.05)}
+.flow-fact .k{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;color:var(--accent-soft);margin-bottom:8px}
+.flow-fact p{font-size:.88rem;line-height:1.9;color:var(--text-dim)}
+@media (max-width:860px){
+  .proof-grid,.flow-steps,.flow-facts{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .section-start .container{gap:12px;padding-top:18px;padding-bottom:18px}
+  .start-list{flex-direction:column;gap:8px}
+  .proof-card{padding:18px}
+  .proof-dl{grid-template-columns:1fr;gap:2px}
+  .proof-dl dd{margin-bottom:8px}
+}
+
+/* 02: 課題カードの見出し・アイコンをベン図の色に合わせる（技術=青 / 適応=橙） */
+.apc--tech .apc-title{color:#7fb0ff}
+.apc--tech .apc-ico{color:#4c8dff;border-color:rgba(76,141,255,.4);background:rgba(76,141,255,.07);box-shadow:0 0 34px rgba(76,141,255,.16)}
+.apc--tech .apc-num,.apc--tech .apc-stalls-label{color:#7fb0ff}
+.apc--tech .apc-line{background:linear-gradient(90deg,#4c8dff 0%,rgba(76,141,255,.25) 45%,transparent 100%)}
+.apc--tech .apc-stall-tag{color:#7fb0ff;border-color:rgba(76,141,255,.4);background:rgba(76,141,255,.1)}
+.apc--human .apc-title{color:var(--accent-soft)}
