@@ -628,10 +628,12 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-soft);outlin
 .start-list li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 .start-list b{color:var(--text);font-weight:700}
 /* 03 Proof */
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:1024px){.proof-grid{grid-template-columns:1fr 1fr}}
 .proof-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 26px;display:flex;flex-direction:column;gap:12px}
 .proof-title{font-size:1.14rem;font-weight:800;line-height:1.5}
-.proof-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:4px 0 0}
+.proof-dl{display:grid;grid-template-columns:1fr;gap:2px;margin:4px 0 0}
+.proof-dl dd{margin-bottom:8px}
 .proof-dl dt{font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--accent-soft);padding-top:3px;white-space:nowrap}
 .proof-dl dd{margin:0;font-size:.92rem;line-height:1.75;color:var(--text-dim)}
 .proof-dl dd b{color:var(--text);font-weight:700}
