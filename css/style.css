@@ -509,7 +509,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .method-phase-name{display:inline;font-size:1.12rem}
   .method-phase-en{display:inline;margin:0;font-size:.6rem}
   .method-phase-note{padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:6px;font-size:.84rem}
-  .method-phase-note::before,.method-phase-head::before{content:none}
+  /* PC側の橋渡し線（specificity 0,2,1）に負けないよう同じ詳細度で無効化 */
+  .method-phase:not(:first-child) .method-phase-note::before,.method-phase:not(:first-child) .method-phase-head::before{content:none}
   .method-steps{gap:4px}
   .method-step{gap:14px;padding:8px 0}
   .method-num{width:40px;height:40px;font-size:1rem}
