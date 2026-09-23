@@ -157,8 +157,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .orbit-core::after{animation-delay:1.5s}
 @keyframes core-pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
 .orbit-core-icon{color:var(--accent);display:grid;place-items:center;margin-bottom:2px}
-.orbit-core-jp{font-family:var(--font-ja);font-weight:900;font-size:clamp(.9rem,1.7vw,1.18rem);letter-spacing:.02em}
-.orbit-core-en{font-family:var(--font-en);font-size:.5rem;font-weight:600;letter-spacing:.14em;color:var(--accent-soft)}
+/* 中心のラベルは公転図のサイズから決める（円からはみ出さないため）
+   実測: 和文=6.1em相当 / 欧文=15em相当。中心円は公転図の34% */
+.orbit-core-jp{font-family:var(--font-ja);font-weight:900;font-size:min(1.18rem,calc(var(--orbit-size)*.049));letter-spacing:.02em;white-space:nowrap}
+.orbit-core-en{font-family:var(--font-en);font-size:min(.5rem,calc(var(--orbit-size)*.021));font-weight:600;letter-spacing:.14em;color:var(--accent-soft);white-space:nowrap}
 
 .orbit-ring{position:absolute;inset:0;animation:orbit-spin 38s linear infinite}
 @keyframes orbit-spin{to{transform:rotate(360deg)}}
