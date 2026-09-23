@@ -513,7 +513,13 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .method-phase:not(:first-child) .method-phase-note::before,.method-phase:not(:first-child) .method-phase-head::before{content:none}
   .method-steps{gap:4px}
   .method-step{gap:14px;padding:8px 0}
-  .method-num{width:40px;height:40px;font-size:1rem}
+  /* スマホ: 番号は大項目側（①②③）。1フェーズ1工程なので工程の丸数字は消す */
+  .method-list{counter-reset:phase}
+  .method-phase{counter-increment:phase}
+  .method-phase-name::before{content:counter(phase,circled-decimal) " ";font-family:var(--font-ja)}
+  .method-num{display:none}
+  .method-step{gap:0}
+  .method-step:not(:last-child)::after{content:none}
   .method-body{padding-top:4px}
   .method-body h3{font-size:1.02rem}
   .method-body p{font-size:.86rem}
