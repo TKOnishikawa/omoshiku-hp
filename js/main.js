@@ -127,7 +127,7 @@
     revealStagger(".strength-grid", ".strength-card");
     revealStagger(".service-grid", ".service-card");
     revealStagger(".theme-grid", ".theme-card");
-    revealStagger(".method-list", ".method-step");
+    revealStagger(".method-list", ".method-phase");
     reveal(".about-top", { x: -30, y: 0 });
     revealStagger(".about-cards", ".about-card");
     reveal(".about-story");
