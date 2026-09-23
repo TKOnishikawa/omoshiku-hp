@@ -230,7 +230,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .venn-ico{fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .venn-ico--tech{stroke:#4c8dff}
 .venn-ico--human{stroke:var(--accent)}
-.venn-label{font-family:var(--font-ja);font-size:15px;font-weight:800}
+.venn-label{font-family:var(--font-ja);font-size:20px;font-weight:800}
 .venn-label--tech{fill:#7fb0ff}
 .venn-label--human{fill:var(--accent-soft)}
 .apc-reality-copy{text-align:center;font-size:1.28rem;font-weight:900;line-height:1.55}
@@ -596,8 +596,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .apc-issue{grid-template-columns:1fr;gap:14px}
   .apc-ico{width:60px;height:60px;border-radius:14px}
   .apc-ico svg{width:30px;height:30px}
-  .apc-reality{flex-direction:row;justify-content:center;align-items:center;gap:40px}
-  .venn{width:300px;flex-shrink:0}
+  .apc-reality{flex-direction:row;justify-content:center;align-items:center;gap:56px;padding:6px 0}
+  .venn{width:440px;flex-shrink:0}
+  .apc-reality-copy{font-size:1.42rem}
+  .apc-reality-sub{font-size:1.02rem}
   .apc-reality-copy{text-align:left}
 }
 /* Contact: 送信前に相談の見通しを見せる */
