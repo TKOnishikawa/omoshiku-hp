@@ -195,64 +195,62 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .link-more .btn-arrow{transition:transform .25s}
 .link-more:hover .btn-arrow{transform:translateX(4px)}
 
-/* ---- 02 Problem / Why DX fails ---- */
-.section-problem{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%)}
-.fail-grid{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:20px;align-items:stretch}
-.fail-col{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 26px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px}
-.fail-col-tag{font-size:.82rem;font-weight:700;color:var(--text-dim)}
-.fail-icon{color:var(--text-mut);margin:6px 0}
-.fail-headline{font-weight:700;font-size:1.02rem;color:var(--text)}
-.fail-x{margin-top:4px;color:var(--text-mut);font-size:.9rem;display:flex;align-items:center;gap:6px}
-.x-mark{color:#e8645a;font-weight:800}
-.fail-col--omoshiku{background:linear-gradient(160deg,rgba(255,122,24,.12),rgba(255,90,31,.04));
-  border:1.5px solid var(--border-accent);box-shadow:0 0 50px rgba(255,90,31,.12)}
-.fail-col--omoshiku .fail-col-tag{color:var(--accent-soft)}
-.flow{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:10px 0 4px}
-.flow-step{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.78rem;font-weight:700}
-.flow-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:var(--accent);
+/* ---- 02 Our Approach（仕組みだけではDXは回らない） ---- */
+.section-approach{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%)}
+.section-head--center{margin-left:auto;margin-right:auto;text-align:center}
+.approach-stack{display:flex;flex-direction:column;gap:18px;max-width:880px;margin:0 auto}
+.apc{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));border:1px solid var(--border);
+  border-radius:var(--r-lg);padding:20px 28px 26px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.apc-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.apc-num{font-family:var(--font-mono);font-size:1.05rem;font-weight:800;color:var(--accent);letter-spacing:.04em}
+.apc-line{flex:1;height:1px;background:linear-gradient(90deg,var(--accent) 0%,rgba(255,110,20,.25) 45%,transparent 100%)}
+.apc-tag{font-family:var(--font-en);font-size:.68rem;font-weight:600;letter-spacing:.24em;color:var(--text-mut)}
+/* 01 / 02: 課題カード */
+.apc-issue{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.apc-ico{width:104px;height:104px;border-radius:20px;display:grid;place-items:center;color:var(--accent);
+  background:rgba(255,122,24,.07);border:1.5px solid var(--border-accent);box-shadow:0 0 34px rgba(255,110,20,.16)}
+.apc-title{font-size:1.5rem;font-weight:900;letter-spacing:.01em;line-height:1.3}
+.apc-sub{font-size:1rem;font-weight:500;margin:6px 0 10px}
+.apc-desc{font-size:.9rem;color:var(--text-dim);line-height:1.8}
+/* 03: ベン図 */
+.apc-reality{display:flex;flex-direction:column;align-items:center;gap:10px}
+.venn{width:min(100%,400px);height:auto;overflow:visible}
+.venn-fill{stroke:none}
+.venn-fill--tech{fill:rgba(76,141,255,.07)}
+.venn-fill--human{fill:rgba(255,110,20,.07)}
+.venn-ring{fill:none;stroke-width:2.4}
+.venn-ring--tech{stroke:#4c8dff;filter:drop-shadow(0 0 7px rgba(76,141,255,.6))}
+.venn-ring--human{stroke:var(--accent);filter:drop-shadow(0 0 7px rgba(255,110,20,.6))}
+.venn-ico{fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.venn-ico--tech{stroke:#4c8dff}
+.venn-ico--human{stroke:var(--accent)}
+.venn-label{font-family:var(--font-ja);font-size:15px;font-weight:800}
+.venn-label--tech{fill:#7fb0ff}
+.venn-label--human{fill:var(--accent-soft)}
+.apc-reality-copy{text-align:center;font-size:1.28rem;font-weight:900;line-height:1.55}
+/* 04: だから必要なのは */
+.apc-solution-title{text-align:center;font-size:1.32rem;font-weight:900;margin-bottom:16px}
+.apc-rows{display:flex;flex-direction:column;gap:10px}
+.apc-row{display:grid;grid-template-columns:auto 1fr auto auto;align-items:center;column-gap:16px;
+  padding:11px 18px 11px 12px;border-radius:999px;color:var(--text);
+  background:linear-gradient(90deg,rgba(255,110,20,.10),rgba(255,110,20,.03) 60%,rgba(255,255,255,.02));
+  border:1px solid var(--border-accent);box-shadow:0 0 22px rgba(255,110,20,.08);transition:transform .2s,border-color .2s,box-shadow .2s}
+.apc-row:hover{transform:translateX(4px);border-color:var(--accent);box-shadow:0 0 28px rgba(255,110,20,.18)}
+.apc-row-ico{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--accent);
   background:rgba(255,122,24,.1);border:1px solid var(--border-accent)}
-.flow-arrow{color:var(--accent);font-weight:800}
-.fail-conclusion{margin-top:8px;font-weight:700;font-size:1.05rem;line-height:1.7}
+.apc-row-name{font-size:1.02rem;font-weight:800}
+.apc-row-sub{font-size:.88rem;color:var(--text-dim);text-align:right}
+.apc-row-chev{color:var(--accent)}
+/* OUR OUTCOME */
+.approach-outcome{position:relative;text-align:center;max-width:880px;margin:34px auto 0;padding-top:46px}
+.approach-outcome::before{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:min(100%,560px);height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,122,24,.6),transparent)}
+.approach-outcome-arrow{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:0;height:0;
+  border-left:18px solid transparent;border-right:18px solid transparent;border-top:16px solid var(--accent);
+  filter:drop-shadow(0 0 12px rgba(255,110,20,.9))}
+.approach-outcome .section-label{margin:0 0 12px;color:var(--accent-soft)}
+.approach-outcome-copy{font-size:clamp(1.3rem,2.6vw,2rem);font-weight:900;line-height:1.5;letter-spacing:-.01em}
 
-/* ---- 02 Problem pain cards (入口/あいだ/出口) ---- */
-.pcard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:30px 26px;
-  display:flex;flex-direction:column;align-items:center;text-align:center;gap:15px;
-  transition:transform .25s,border-color .25s}
-.pcard:hover{transform:translateY(-5px);border-color:var(--border-accent)}
-.pcard-badge{font-size:.82rem;font-weight:700;color:#fff;background:var(--grad-accent);border-radius:999px;
-  padding:6px 18px;box-shadow:var(--shadow-accent)}
-.pcard-title{font-size:1.06rem;font-weight:800;line-height:1.55}
-.pcard-ico{color:var(--accent);display:grid;place-items:center;min-height:56px;margin:2px 0}
-.pcard-desc{font-size:.84rem;color:var(--text-dim);line-height:1.8}
-
-/* オモシクの場合（選ばれる理由の先頭・フィーチャー帯） */
-.omoshiku-feature{background:linear-gradient(160deg,rgba(255,110,20,.12),rgba(255,74,30,.04));
-  border:1.5px solid var(--border-accent);border-radius:var(--r-lg);box-shadow:0 0 50px rgba(255,90,31,.12);
-  padding:26px 24px;margin-bottom:20px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
-.omoshiku-feature .fail-col-tag{color:var(--accent-soft);font-size:.86rem}
-.omoshiku-feature .fail-conclusion{font-size:1.16rem;margin-top:2px}
-
-/* 矢羽プロセス図 (戦略→実装→定着→成果) — オレンジ矢羽+白文字 */
-.proc{display:flex;flex-wrap:wrap;justify-content:center;gap:5px}
-.proc-step{background:var(--grad-accent);color:#fff;font-weight:800;font-size:.96rem;letter-spacing:.05em;line-height:1;
-  padding:12px 24px 12px 30px;
-  -webkit-clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%);
-  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%,13px 50%)}
-.proc-step:first-child{padding-left:22px;
-  -webkit-clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%);
-  clip-path:polygon(0 0,calc(100% - 13px) 0,100% 50%,calc(100% - 13px) 100%,0 100%)}
-
-/* ---- 03 Strengths ---- */
-.strength-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.strength-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:26px 20px;
-  transition:transform .25s,border-color .25s,background .25s}
-.strength-card:hover{transform:translateY(-5px);border-color:var(--border-accent);background:var(--surface-2)}
-.strength-ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;color:var(--accent);
-  background:rgba(255,122,24,.1);border:1px solid var(--border-accent);margin-bottom:16px}
-.strength-card h3{font-size:.98rem;font-weight:700;margin-bottom:10px;line-height:1.5}
-.strength-card p{font-size:.8rem;color:var(--text-dim);line-height:1.75}
 
 /* ---- 04 Services ---- */
 .section-services{background:linear-gradient(180deg,var(--navy-2) 0%,var(--navy) 100%)}
@@ -465,7 +463,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .hero-meta{margin-top:0}
   .hero-trust,.hero-chips{justify-content:center}
   .hero-title br{display:none}
-  .strength-grid{grid-template-columns:repeat(2,1fr)}
   .about-cards{grid-template-columns:repeat(2,1fr)}
   .br-pc{display:none}
 }
@@ -478,8 +475,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @media(max-width:640px){
   .container{padding:0 20px}
   .nav-inner{padding:0 20px}
-  .service-grid,.kpi-grid,.case-grid,.pain-grid,.strength-grid,.theme-grid{grid-template-columns:1fr}
-  .strength-grid{max-width:380px;margin:0 auto}
+  .service-grid,.kpi-grid,.case-grid,.pain-grid,.theme-grid{grid-template-columns:1fr}
   .about-cards{grid-template-columns:1fr;gap:10px}
   .about-story{margin-top:20px;padding:24px 20px;border-radius:14px}
   .about-story-title{font-size:1.12rem;margin-bottom:12px}
@@ -510,12 +506,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .pain-card{flex-direction:row}
 
   /* compact cards on mobile: icon inline-left (縦スクロール削減) */
-  .strength-grid{max-width:none}
-  .strength-card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center;padding:16px 18px}
-  .strength-ico{grid-column:1;grid-row:1/3;margin-bottom:0;width:42px;height:42px}
-  .strength-card h3{grid-column:2;grid-row:1;margin-bottom:3px}
-  .strength-card p{grid-column:2;grid-row:2}
-
   .service-card{display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:start;padding:18px 18px}
   .service-ico{grid-column:1;grid-row:1/3;margin-bottom:0;width:46px;height:46px;align-self:center}
   .service-en{grid-column:2;grid-row:1;align-self:end}
@@ -525,18 +515,24 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
   .about-top{justify-content:center}
 
-  /* Problem pain cards: 1カラム・縦幅圧縮 */
-  .pcard-grid{grid-template-columns:1fr;gap:12px}
-  .pcard{padding:20px 18px;gap:10px}
-  .pcard-ico{min-height:auto}
-  .pcard-ico svg{height:38px;width:auto}
-  .pcard-title{font-size:1rem}
-  .pcard-desc{line-height:1.7}
-
-  /* 矢羽プロセス図: モバイルは縮めて1行に */
-  .proc{gap:3px}
-  .proc-step{font-size:.84rem;padding:9px 15px 9px 21px;letter-spacing:.02em}
-  .proc-step:first-child{padding-left:13px}
+  /* Our Approach: モバイル */
+  .approach-stack{gap:12px}
+  .apc{padding:16px 18px 20px;border-radius:16px}
+  .apc-head{gap:12px;margin-bottom:14px}
+  .apc-issue{gap:16px}
+  .apc-ico{width:72px;height:72px;border-radius:16px}
+  .apc-ico svg{width:36px;height:36px}
+  .apc-title{font-size:1.25rem}
+  .apc-sub{font-size:.92rem;margin:4px 0 6px}
+  .apc-desc{font-size:.84rem;line-height:1.7}
+  .apc-reality-copy{font-size:1.08rem}
+  .apc-solution-title{font-size:1.14rem;margin-bottom:12px}
+  .apc-row{grid-template-columns:auto 1fr auto;grid-template-areas:"ico name chev" "ico sub chev";row-gap:2px;column-gap:12px;padding:10px 14px 10px 10px;border-radius:22px}
+  .apc-row-ico{grid-area:ico;width:36px;height:36px}
+  .apc-row-name{grid-area:name;font-size:.96rem}
+  .apc-row-sub{grid-area:sub;text-align:left;font-size:.8rem}
+  .apc-row-chev{grid-area:chev}
+  .approach-outcome{margin-top:26px;padding-top:38px}
 }
 @media(max-width:400px){
   .about-cards{grid-template-columns:1fr}

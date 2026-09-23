@@ -123,8 +123,8 @@
   function initReveals() {
     if (!hasGSAP || reduce) return;
     reveal(".section-head");
-    revealStagger(".fail-grid", ".fail-col");
-    revealStagger(".strength-grid", ".strength-card");
+    revealStagger(".approach-stack", ".apc");
+    reveal(".approach-outcome");
     revealStagger(".service-grid", ".service-card");
     revealStagger(".theme-grid", ".theme-card");
     revealStagger(".method-list", ".method-phase");
@@ -149,7 +149,7 @@
   /* ---------- Card 3D tilt (desktop) ---------- */
   function initTilt() {
     if (!hasGSAP || reduce || window.matchMedia("(max-width:860px)").matches) return;
-    document.querySelectorAll(".service-card, .strength-card, .about-card, .case-card").forEach(function (card) {
+    document.querySelectorAll(".service-card, .about-card, .case-card").forEach(function (card) {
       card.addEventListener("mousemove", function (e) {
         var r = card.getBoundingClientRect();
         gsap.to(card, { rotateY: ((e.clientX - r.left) / r.width - 0.5) * 8, rotateX: -((e.clientY - r.top) / r.height - 0.5) * 8, duration: 0.2, transformPerspective: 900 });
