@@ -187,7 +187,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .section{position:relative;padding:clamp(52px,6vw,72px) 0}
 .section-head{margin-bottom:30px;max-width:760px}
 .section-num{font-family:var(--font-mono);font-size:.78rem;font-weight:700;color:var(--accent);letter-spacing:.1em}
-.section-label{display:block;font-family:var(--font-en);font-size:.7rem;font-weight:600;letter-spacing:.24em;color:var(--text-mut);margin:8px 0 14px}
+.section-label{display:block;font-family:var(--font-en);font-size:.7rem;font-weight:600;letter-spacing:.24em;color:var(--text-mut);margin:0 0 14px}
 .section-title{font-family:var(--font-ja);font-weight:900;font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.4;letter-spacing:-.01em}
 .section-lead{margin-top:14px;font-size:1rem;color:var(--text-dim)}
 .section-foot{margin-top:var(--s7);display:flex;justify-content:center}
