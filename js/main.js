@@ -21,7 +21,7 @@
 
     // active section highlight
     if (hasGSAP && !reduce) {
-      ["#strengths", "#services", "#results", "#about", "#method"].forEach(function (id) {
+      ["#strengths", "#services", "#cases", "#about", "#method"].forEach(function (id) {
         var el = document.querySelector(id);
         if (!el) return;
         ScrollTrigger.create({
@@ -127,19 +127,10 @@
     revealStagger(".strength-grid", ".strength-card");
     revealStagger(".service-grid", ".service-card");
     revealStagger(".theme-grid", ".theme-card");
-    revealStagger(".kpi-grid", ".kpi-card", {
-      scrollTrigger: {
-        trigger: ".kpi-grid", start: "top 82%", once: true,
-        onEnter: function () {
-          document.querySelectorAll(".kpi-value span[data-count]").forEach(function (el) {
-            countUp(el, parseFloat(el.dataset.count));
-          });
-        }
-      }
-    });
     revealStagger(".method-list", ".method-step");
     reveal(".about-top", { x: -30, y: 0 });
     revealStagger(".about-cards", ".about-card");
+    reveal(".about-story");
     revealStagger(".case-grid", ".case-card");
     revealStagger(".pain-grid", ".pain-card");
     reveal(".cta-title", { scale: 0.94, y: 0, ease: EASE.bounce, duration: 0.9 });
