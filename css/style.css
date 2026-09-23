@@ -605,3 +605,60 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-soft);outlin
   .apc-stall-tag{min-width:58px}
   .contact-head{text-align:left}
 }
+
+
+/* ===== preview: D2〜D9 ===== */
+.hero-cta-note{margin-top:12px;font-size:.84rem;color:var(--text-dim)}
+/* 01b こんな状態から */
+.section-start{padding-top:0;padding-bottom:0}
+.section-start .container{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-top:22px;padding-bottom:22px;
+  display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.start-label{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:var(--accent-soft);white-space:nowrap}
+.start-list{list-style:none;display:flex;gap:10px 28px;flex-wrap:wrap;margin:0;padding:0}
+.start-list li{position:relative;padding-left:16px;font-size:.92rem;color:var(--text-dim);line-height:1.7}
+.start-list li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+.start-list b{color:var(--text);font-weight:700}
+/* 03 Proof */
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.proof-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px 26px;display:flex;flex-direction:column;gap:12px}
+.proof-title{font-size:1.14rem;font-weight:800;line-height:1.5}
+.proof-dl{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:4px 0 0}
+.proof-dl dt{font-size:.74rem;font-weight:800;letter-spacing:.06em;color:var(--accent-soft);padding-top:3px;white-space:nowrap}
+.proof-dl dd{margin:0;font-size:.92rem;line-height:1.75;color:var(--text-dim)}
+.proof-dl dd b{color:var(--text);font-weight:700}
+.proof-note{margin-top:16px;font-size:.8rem;color:var(--text-mut);line-height:1.7}
+.tbd{display:inline-block;background:#ffe599;color:#1c1b18;font-size:.74rem;font-weight:800;border-radius:4px;padding:1px 7px;margin:0 4px}
+/* 04 解決できる課題 */
+.service-desc{font-size:.95rem;line-height:1.8;color:var(--text-dim);margin-bottom:14px}
+.service-ex{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:var(--accent-soft);margin-bottom:6px}
+/* 05 Method: 3工程 */
+.method-ask{margin-top:8px;font-size:.84rem;color:var(--text-mut)}
+.method-ask b{color:var(--accent-soft);font-weight:700}
+/* 08 How to start */
+.flow-steps{list-style:none;margin:0 0 22px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flow-steps li{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-md);padding:20px}
+.flow-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-mono);font-weight:800;color:var(--navy);background:var(--grad-accent)}
+.flow-steps h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+.flow-steps p{font-size:.88rem;line-height:1.75;color:var(--text-dim)}
+.flow-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flow-fact{border:1px solid var(--border-accent);border-radius:var(--r-md);padding:16px 18px;background:rgba(255,122,24,.05)}
+.flow-fact .k{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;color:var(--accent-soft);margin-bottom:8px}
+.flow-fact p{font-size:.88rem;line-height:1.9;color:var(--text-dim)}
+@media (max-width:860px){
+  .proof-grid,.flow-steps,.flow-facts{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .section-start .container{gap:12px;padding-top:18px;padding-bottom:18px}
+  .start-list{flex-direction:column;gap:8px}
+  .proof-card{padding:18px}
+  .proof-dl{grid-template-columns:1fr;gap:2px}
+  .proof-dl dd{margin-bottom:8px}
+}
+
+/* 02: 課題カードの見出し・アイコンをベン図の色に合わせる（技術=青 / 適応=橙） */
+.apc--tech .apc-title{color:#7fb0ff}
+.apc--tech .apc-ico{color:#4c8dff;border-color:rgba(76,141,255,.4);background:rgba(76,141,255,.07);box-shadow:0 0 34px rgba(76,141,255,.16)}
+.apc--tech .apc-num,.apc--tech .apc-stalls-label{color:#7fb0ff}
+.apc--tech .apc-line{background:linear-gradient(90deg,#4c8dff 0%,rgba(76,141,255,.25) 45%,transparent 100%)}
+.apc--tech .apc-stall-tag{color:#7fb0ff;border-color:rgba(76,141,255,.4);background:rgba(76,141,255,.1)}
+.apc--human .apc-title{color:var(--accent-soft)}
