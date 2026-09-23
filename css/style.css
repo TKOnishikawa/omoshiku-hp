@@ -233,6 +233,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .venn-label{font-family:var(--font-ja);font-size:20px;font-weight:800}
 .venn-label--tech{fill:#7fb0ff}
 .venn-label--human{fill:var(--accent-soft)}
+.venn-cap{font-family:var(--font-ja);font-size:10.5px;font-weight:400;fill:var(--text-dim)}
 .apc-reality-copy{text-align:center;font-size:1.28rem;font-weight:900;line-height:1.55}
 /* 04: だから必要なのは */
 .apc-solution-title{text-align:center;font-size:1.32rem;font-weight:900;margin-bottom:16px}
