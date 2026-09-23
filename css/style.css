@@ -311,11 +311,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .method-phase-en{display:block;margin-top:5px;font-family:var(--font-en);font-size:.64rem;font-weight:600;
   letter-spacing:.18em;color:var(--text-mut)}
 .method-phase-main{min-width:0}
-.method-phase-note{font-size:.88rem;line-height:1.75;color:var(--text-dim);padding:14px 0 6px 76px}
+.method-phase-note{position:relative;font-size:.88rem;line-height:1.75;color:var(--text-dim);padding:14px 0 6px 76px}
 .method-steps{position:relative;display:flex;flex-direction:column;gap:8px}
-/* 連結線は「丸の中心 → 次の丸の中心」だけを結ぶ（最後の丸から下に線を垂らさない）
-   丸52px + 上下padding9px → 中心=35px / li間gap=8px → 次の中心まで 43px */
+/* 縦線は 1→6 まで途切れず繋ぐ。丸52px + 上下padding9px → 中心=35px / li間gap=8px
+   ①同フェーズ内: 丸の中心 → 次の丸の中心（+43px） */
 .method-step:not(:last-child)::after{content:"";position:absolute;left:25px;top:35px;bottom:-43px;width:2px;background:var(--phase)}
+/* ②フェーズの最後の丸 → 次フェーズの先頭（フェーズ間 gap 30px ぶん下まで伸ばす） */
+.method-phase:not(:last-child) .method-steps>.method-step:last-child::after{content:"";position:absolute;left:25px;top:35px;bottom:-30px;width:2px;background:var(--phase)}
+/* ③次フェーズの先頭（=一行説明の上端）→ そのフェーズ1つ目の丸の中心。ここで色が切り替わる */
+.method-phase:not(:first-child) .method-phase-note::before{content:"";position:absolute;left:25px;top:0;bottom:-35px;width:2px;background:var(--phase)}
 .method-step{display:flex;gap:24px;align-items:flex-start;padding:9px 0;position:relative}
 .method-num{flex-shrink:0;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
   font-family:var(--font-mono);font-weight:800;font-size:1.3rem;color:#fff;background:var(--grad-accent);
@@ -489,10 +493,15 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .hero-trust{gap:14px}
   .method-list{gap:24px}
   .method-phase{grid-template-columns:1fr;column-gap:0}
-  .method-phase-head{padding-top:0;text-align:left;padding-left:2px}
+  /* 縦線(left:21px)を避けてラベルもステップ見出しの位置に揃える */
+  .method-phase-head{position:relative;padding-top:0;text-align:left;padding-left:62px}
   .method-phase-name{font-size:1.06rem}
-  .method-phase-note{padding:8px 0 4px 2px}
+  .method-phase-note{padding:8px 0 4px 62px}
   .method-step:not(:last-child)::after{left:21px;top:31px;bottom:-39px}
+  /* 丸44px + padding9px → 中心=31px / フェーズ間 gap=24px */
+  .method-phase:not(:last-child) .method-steps>.method-step:last-child::after{left:21px;top:31px;bottom:0}
+  .method-phase:not(:first-child) .method-phase-head::before{content:"";position:absolute;left:21px;top:-24px;bottom:0;width:2px;background:var(--phase)}
+  .method-phase:not(:first-child) .method-phase-note::before{left:21px;top:0;bottom:-31px}
   .method-num{width:44px;height:44px;font-size:1.1rem}
   .method-step{gap:18px}
   .contact-form{padding:24px}
