@@ -640,7 +640,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent-soft);outlin
 .flow-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-mono);font-weight:800;color:var(--navy);background:var(--grad-accent)}
 .flow-steps h3{font-size:1rem;font-weight:800;margin-bottom:6px}
 .flow-steps p{font-size:.88rem;line-height:1.75;color:var(--text-dim)}
-.flow-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.flow-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .flow-fact{border:1px solid var(--border-accent);border-radius:var(--r-md);padding:16px 18px;background:rgba(255,122,24,.05)}
 .flow-fact .k{display:block;font-size:.74rem;font-weight:800;letter-spacing:.08em;color:var(--accent-soft);margin-bottom:8px}
 .flow-fact p{font-size:.88rem;line-height:1.9;color:var(--text-dim)}
