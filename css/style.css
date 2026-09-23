@@ -499,19 +499,26 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .form-grid{grid-template-columns:1fr}
   .cta-actions .btn{min-width:0;width:100%}
   .hero-trust{gap:14px}
-  .method-list{gap:24px}
-  .method-phase{grid-template-columns:1fr;column-gap:0}
-  /* 縦線(left:21px)を避けてラベルもステップ見出しの位置に揃える */
-  .method-phase-head{position:relative;padding-top:0;text-align:left;padding-left:62px}
-  .method-phase-name{font-size:1.06rem}
-  .method-phase-note{padding:8px 0 4px 62px}
-  .method-step:not(:last-child)::after{left:21px;top:31px;bottom:-39px}
-  /* 丸44px + padding9px → 中心=31px / フェーズ間 gap=24px */
-  .method-phase:not(:last-child) .method-steps>.method-step:last-child::after{left:21px;top:31px;bottom:0}
-  .method-phase:not(:first-child) .method-phase-head::before{content:"";position:absolute;left:21px;top:-24px;bottom:0;width:2px;background:var(--phase)}
-  .method-phase:not(:first-child) .method-phase-note::before{left:21px;top:0;bottom:-31px}
-  .method-num{width:44px;height:44px;font-size:1.1rem}
-  .method-step{gap:18px}
+  /* スマホ: フェーズを枠にして、ステップをその中へ（PCの左ラベル列の役割を枠線が担う）
+     フェーズ間の線はつながない。線は枠内のステップ同士だけ */
+  .method-list{gap:14px}
+  .method-phase{grid-template-columns:1fr;column-gap:0;padding:16px 16px 14px;border-radius:16px;
+    background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--phase)}
+  .method-phase-head{position:relative;padding:0;text-align:left;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .method-phase-bar{display:none}
+  .method-phase-name{display:inline;font-size:1.12rem}
+  .method-phase-en{display:inline;margin:0;font-size:.6rem}
+  .method-phase-note{padding:6px 0 10px;border-bottom:1px solid var(--border);margin-bottom:6px;font-size:.84rem}
+  .method-phase-note::before,.method-phase-head::before{content:none}
+  .method-steps{gap:4px}
+  .method-step{gap:14px;padding:8px 0}
+  .method-num{width:40px;height:40px;font-size:1rem}
+  .method-body{padding-top:4px}
+  .method-body h3{font-size:1.02rem}
+  .method-body p{font-size:.86rem}
+  /* 丸40px + padding8px → 中心=28px / li間gap=4px → 次の中心まで 36px */
+  .method-step:not(:last-child)::after{left:19px;top:28px;bottom:-36px}
+  .method-phase:not(:last-child) .method-steps>.method-step:last-child::after{content:none}
   .contact-form{padding:24px}
   .pain-card{flex-direction:row}
 
