@@ -78,14 +78,15 @@ h1,h2,h3,h4{word-break:auto-phrase;line-break:strict;text-wrap:balance}
 
 /* ---- 01 FV ---- */
 .hero{position:relative;overflow:hidden;background:var(--ink)}
-.hero::before{content:"";position:absolute;width:820px;height:820px;right:-260px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(255,110,20,.22) 0%,rgba(245,58,22,.06) 46%,transparent 70%);pointer-events:none}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px 64px;align-items:end;padding-block:clamp(56px,8vw,112px) clamp(56px,7vw,96px)}
+.hero::before{content:"";position:absolute;width:min(980px,90vw);height:min(980px,90vw);right:-18%;top:-34%;border-radius:50%;background:radial-gradient(circle,rgba(255,110,20,.26) 0%,rgba(245,58,22,.07) 46%,transparent 70%);pointer-events:none}
+.hero::after{content:"";position:absolute;width:640px;height:640px;left:-220px;bottom:-320px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.14),transparent 64%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-height:min(calc(100svh - 68px),860px);padding-block:clamp(56px,8vw,104px)}
 .chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-bottom:26px}
 .chip{font-size:13px;font-weight:700;padding:5px 14px;border:1px solid rgba(255,122,24,.4);border-radius:999px;color:var(--accent-soft);background:rgba(255,110,22,.07)}
 .chip-x{color:var(--text-mut);font-size:13px}
-.hero h1{font-size:clamp(32px,4.6vw,60px);font-weight:900;line-height:1.3;letter-spacing:.01em}
-.hero-sub{margin-top:24px;max-width:36em;font-size:16.5px;color:var(--text-dim)}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero h1{font-size:clamp(34px,5.4vw,76px);font-weight:900;line-height:1.28;letter-spacing:.01em}
+.hero-sub{margin-top:28px;max-width:52em;font-size:clamp(15.5px,1.25vw,17.5px);color:var(--text-dim)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:38px}
 .cta-note{margin-top:14px;font-size:13px;color:var(--text-mut)}
 /* FV の背景で小さく立ちのぼる光の粒（旧HPから移植） */
 .hero-particles{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
@@ -101,7 +102,8 @@ h1,h2,h3,h4{word-break:auto-phrase;line-break:strict;text-wrap:balance}
 .who dd{margin:4px 0 0}
 .who dd b{display:block;font-size:16px;font-weight:700;line-height:1.5}
 .who dd span{display:block;font-size:13px;color:var(--text-dim);line-height:1.65;margin-top:3px}
-@media (max-width:960px){.hero-grid{grid-template-columns:1fr;align-items:start}.who{border-left:0;padding-left:0}}
+@media (max-width:960px){.hero-grid{min-height:0}}
+@media (max-width:640px){.hero-sub .p{display:inline}.hero-sub br{display:none}.chips{gap:6px;margin-bottom:22px}.chip{font-size:12px;padding:4px 10px}.chip-x{font-size:11px}}
 @media (max-width:560px){.cta-row .btn{width:100%}}
 
 /* ---- 02 What we do ---- */
@@ -321,21 +323,13 @@ form .btn{width:100%}
         <span class="chip">定着</span>
       </div>
       <h1><span class="p">売上・利益を伸ばす</span><span class="p">仕組みを、</span><br><span class="p"><span class="accent">戦略</span>から<span class="accent">実装</span>まで。</span></h1>
-      <p class="hero-sub">伸びを止めている所を見つけ、売上・利益にいちばん効く一手を、AI・データ・システムで形にします。戦略づくりから、現場で使える仕組みの実装・定着まで一貫して担当します。</p>
+      <p class="hero-sub"><span class="p">伸びを止めている所を見つけ、</span><span class="p">売上・利益にいちばん効く一手を、</span><span class="p">AI・データ・システムで形にします。</span><br><span class="p">戦略づくりから、</span><span class="p">現場で使える仕組みの実装・定着まで</span><span class="p">一貫して担当します。</span></p>
       <div class="cta-row">
         <a class="btn btn-primary btn-lg" href="#contact">無料の成長ボトルネック診断<span class="arw">→</span></a>
         <a class="btn btn-outline btn-lg" href="#packages">支援メニューを見る<span class="arw">→</span></a>
       </div>
       <p class="cta-note">60分・オンライン。1週間以内に、伸ばす数字・止めている所・3か月の一手を1枚のプランにしてお渡しします。</p>
     </div>
-    <aside class="who" aria-label="代表の経歴">
-      <p class="who-title"><b>代表が、戦略から実装まで一貫して担当</b>必要に応じて専門のパートナーと進めます</p>
-      <dl>
-        <div><dt>STRATEGY</dt><dd><b>経営の課題を、判断できる数字に</b><span>外資コンサルで、企業の戦略・データ・CRMを担当</span></dd></div>
-        <div><dt>BUSINESS</dt><dd><b>売上を伸ばす、事業側の経験</b><span>事業会社のマーケ責任者として、新規事業を初年度売上10億円規模へ</span></dd></div>
-        <div><dt>BUILD</dt><dd><b>決めた施策を、現場で使える形に</b><span>開発マネージャーとして、業務システムの自社開発とAI活用を推進</span></dd></div>
-      </dl>
-    </aside>
   </div>
 </section>
 
