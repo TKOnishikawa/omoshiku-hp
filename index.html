@@ -2,662 +2,745 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>オモシク | 人が主役で、成果と主体性が回り続ける組織に。</title>
-<meta name="description" content="外資コンサル・事業会社マーケ責任者・開発マネージャーの経験を持つプロフェッショナルが、データ・AI・CRM・システムを活用し、成果が出る仕組みを実装します。戦略から実装・定着まで一気通貫で伴走するDXパートナー。">
-<!-- OGP -->
-<meta property="og:title" content="オモシク | 人が主役で、成果と主体性が回り続ける組織に。">
-<meta property="og:description" content="戦略 × データ・AI × システム × 定着。成果が出るまで伴走するDXパートナー。">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>オモシク | 売上・利益を伸ばす仕組みを、戦略から実装まで。</title>
+<meta name="description" content="経営・事業の成長レバレッジを見つけ、AI・データ駆動で業務を再設計し、仕組みを実装します。外資コンサル品質で、戦略から実装・定着まで一気通貫で支援。まずは無料の成長ボトルネック診断から。">
+<meta property="og:title" content="オモシク | 売上・利益を伸ばす仕組みを、戦略から実装まで。">
+<meta property="og:description" content="経営・事業の成長レバレッジを見つけ、AI・データ駆動で仕組みを実装します。まずは無料の成長ボトルネック診断から。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://omoshiku.jp/">
 <meta property="og:site_name" content="オモシク">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="ja_JP">
+<link rel="canonical" href="https://omoshiku.jp/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='17' fill='none' stroke='%23ff8a1e' stroke-width='3'/%3E%3Ccircle cx='20' cy='20' r='5' fill='%23f5391a'/%3E%3C/svg%3E">
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
-<!-- Styles -->
-<link rel="stylesheet" href="css/style.css?v=20261010a">
-<!-- GSAP -->
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-<script defer src="js/main.js?v=20261010a"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Sora:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: 7月版の紺×オレンジと書体（Noto Sans JP 900＋Sora）、丸いボタン。箱の角は小さく、区切りは罫線。左端を1本にそろえる */
+:root{
+  color-scheme: dark;
+  --ink:#0a0a14; --ink-2:#14141f; --ink-3:#1b1b29;
+  --paper:#f6f5f2; --paper-2:#ffffff; --rule:#dedad2; --rule-2:#c9c5bc;
+  --text:#f3efe9; --text-dim:rgba(243,239,233,.74); --text-mut:rgba(243,239,233,.62);
+  --navy:#151826; --navy-dim:#4a4d5c; --navy-mut:#626571;
+  --accent:#ff6e16; --accent-deep:#c94a10; --accent-soft:#ffa867;
+  --grad:linear-gradient(135deg,#ff8a1e 0%,#ff531c 50%,#f53a16 100%);
+  --grad-text:linear-gradient(120deg,#ffa83f 0%,#ff6516 52%,#f53a16 100%);
+  --line:rgba(255,255,255,.12); --line-2:rgba(255,255,255,.2);
+  --font-ja:'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif;
+  --font-en:'Sora','Noto Sans JP',system-ui,sans-serif;
+  --radius:4px; --max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--font-ja);font-size:15px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3,h4,p{margin:0}
+p,li,dd,dt{line-break:strict;text-wrap:pretty}
+h1,h2,h3,h4{word-break:auto-phrase;line-break:strict;text-wrap:balance}
+.p{display:inline-block}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.accent{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+:focus-visible{outline:2px solid var(--accent-soft);outline-offset:3px}
+
+/* ボタン（v1の形） */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-ja);font-weight:700;border-radius:999px;transition:transform .25s,box-shadow .25s,border-color .25s;white-space:nowrap;line-height:1.3;border:0;cursor:pointer}
+.btn .arw{transition:transform .25s}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 12px 32px rgba(255,90,31,.28)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 42px rgba(255,90,31,.4)}
+.btn-outline{background:rgba(255,255,255,.02);color:var(--text);border:1.5px solid var(--line-2)}
+.btn-outline:hover{border-color:var(--accent);transform:translateY(-2px)}
+.btn-lg{padding:15px 30px;font-size:15.5px}
+.btn-sm{padding:9px 18px;font-size:13px}
+.btn-md{padding:11px 22px;font-size:14px}
+
+/* 見出し */
+.label{font-family:var(--font-en);font-size:12px;font-weight:600;letter-spacing:.22em;color:var(--accent);text-transform:uppercase}
+.h2{font-size:clamp(26px,3.3vw,40px);font-weight:900;line-height:1.42;margin-top:12px;letter-spacing:.01em}
+.lead{margin-top:18px;max-width:40em;font-size:16px}
+.sec{padding-block:clamp(64px,8vw,104px)}
+.light{background:var(--paper);color:var(--navy)}
+.light .label{color:var(--accent-deep)}
+.light .lead{color:var(--navy-dim)}
+
+/* 注記バー（HPの外） */
+
+/* ナビ */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(10,10,20,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:68px}
+.nav .logo{height:32px;width:auto}
+.nav nav{display:flex;gap:26px;margin-left:auto;font-size:14px;color:var(--text-dim)}
+.nav nav a:hover{color:#fff}
+@media (max-width:880px){.nav nav{display:none}.nav .btn{margin-left:auto}}
+
+/* ---- 01 FV ---- */
+.hero{position:relative;overflow:hidden;background:var(--ink)}
+.hero::before{content:"";position:absolute;width:820px;height:820px;right:-260px;top:-260px;border-radius:50%;background:radial-gradient(circle,rgba(255,110,20,.22) 0%,rgba(245,58,22,.06) 46%,transparent 70%);pointer-events:none}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:40px 64px;align-items:end;padding-block:clamp(56px,8vw,112px) clamp(56px,7vw,96px)}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin-bottom:26px}
+.chip{font-size:13px;font-weight:700;padding:5px 14px;border:1px solid rgba(255,122,24,.4);border-radius:999px;color:var(--accent-soft);background:rgba(255,110,22,.07)}
+.chip-x{color:var(--text-mut);font-size:13px}
+.hero h1{font-size:clamp(32px,4.6vw,60px);font-weight:900;line-height:1.3;letter-spacing:.01em}
+.hero-sub{margin-top:24px;max-width:36em;font-size:16.5px;color:var(--text-dim)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.cta-note{margin-top:14px;font-size:13px;color:var(--text-mut)}
+.who{border-left:1px solid var(--line-2);padding-left:28px}
+.who-title{font-size:13px;color:var(--text-mut);line-height:1.6}
+.who-title b{display:block;color:var(--text);font-size:15px;margin-bottom:2px}
+.who dl{margin:18px 0 0}
+.who div{padding-block:14px;border-top:1px solid var(--line)}
+.who dt{font-family:var(--font-en);font-size:11px;letter-spacing:.2em;color:var(--accent-soft)}
+.who dd{margin:4px 0 0}
+.who dd b{display:block;font-size:16px;font-weight:700;line-height:1.5}
+.who dd span{display:block;font-size:13px;color:var(--text-dim);line-height:1.65;margin-top:3px}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr;align-items:start}.who{border-left:0;padding-left:0}}
+@media (max-width:560px){.cta-row .btn{width:100%}}
+
+/* ---- 02 What we do ---- */
+.wwd{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 64px;align-items:center}
+.core-dia{width:100%;max-width:440px;justify-self:end}
+@media (max-width:900px){.wwd{grid-template-columns:1fr}.core-dia{justify-self:start;max-width:380px}}
+
+/* ---- 03 実績と代表（プロフィール＋数字） ---- */
+.cred{background:var(--ink)}
+.cred-head{text-align:center;max-width:none;margin-inline:auto}
+.cred-head .h2{font-size:clamp(23px,2.9vw,34px)}
+.prof{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:32px 56px;margin-top:52px;align-items:start;max-width:980px;margin-inline:auto}
+.prof-photo{background:radial-gradient(circle at 50% 30%,#2c2f48 0%,#11121e 72%);border-radius:var(--radius);overflow:hidden;aspect-ratio:9/10}
+.prof-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.prof-en{font-family:var(--font-en);font-size:13px;letter-spacing:.06em;color:var(--text-dim)}
+.prof-role{margin-top:14px;font-size:16px;font-weight:700;line-height:1.6}
+.prof-role b{font-size:26px;font-weight:900;letter-spacing:.1em;display:block;margin-top:2px}
+.prof-hist{margin-top:20px;display:grid;gap:14px}
+.prof-hist p{font-size:14px;color:var(--text-dim);line-height:1.8}
+.prof-hist p b{color:var(--text)}
+.nums-head{text-align:center;margin-top:72px}
+.nums-head small{font-family:var(--font-en);font-size:12px;letter-spacing:.14em;color:var(--text-dim)}
+.nums-head h3{font-size:clamp(20px,2.4vw,26px);font-weight:900;margin-top:6px}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.num{background:var(--paper-2);color:var(--navy);border-radius:var(--radius);padding:22px 16px 20px;text-align:center;min-width:0}
+.num small{display:block;font-size:13px;color:var(--navy-dim);font-weight:500}
+.num b{display:block;font-family:var(--font-en);font-weight:800;font-size:clamp(34px,3.6vw,46px);line-height:1.15;margin-top:8px;color:var(--accent-deep)}
+.num b em{font-style:normal;font-family:var(--font-ja);font-size:15px;font-weight:700;margin-left:2px}
+.num span{display:block;font-size:12px;color:var(--navy-mut);margin-top:6px;line-height:1.55}
+.fine{margin-top:14px;font-size:12px;color:var(--text-mut);text-align:center}
+.num b{white-space:nowrap}
+@media (max-width:900px){.prof{grid-template-columns:1fr}.prof-photo{max-width:300px}.nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.nums{gap:10px}.num{padding:16px 8px}.num b{font-size:26px}.num b em{font-size:12px}}
+/* ---- 02 成長の4ステップ ---- */
+.wwd-head{max-width:none}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;border-top:2px solid var(--navy)}
+.step{padding:20px 22px 24px 0;min-width:0}
+.step+.step{padding-left:22px;border-left:1px solid var(--rule)}
+.step i{font-style:normal;font-family:var(--font-en);font-weight:700;font-size:13px;color:var(--accent-deep);letter-spacing:.12em}
+.step b{display:block;font-size:18px;font-weight:900;margin-top:6px;line-height:1.5}
+.step span{display:block;font-size:13.5px;color:var(--navy-dim);margin-top:8px;line-height:1.75}
+.step.hot{background:var(--navy);color:var(--text);padding-left:22px;border-left:0}
+.step.hot i{color:var(--accent-soft)}
+.step.hot span{color:var(--text-dim)}
+.step em{display:block;font-style:normal;font-size:12px;font-weight:700;color:var(--navy-mut);margin-top:6px}
+.step.hot em{color:var(--accent-soft)}
+.step b{margin-top:2px}
+.step>a{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--accent-deep);border-bottom:1px solid currentColor}
+.step.hot a{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--accent-soft);border-bottom:1px solid currentColor}
+.loop{margin-top:16px;font-size:13.5px;color:var(--navy-mut)}
+.loop b{color:var(--accent-deep);font-family:var(--font-en);margin-right:6px}
+@media (max-width:900px){.steps{grid-template-columns:1fr}.step,.step+.step{padding:16px 0 18px;border-left:0;border-top:1px solid var(--rule)}.step:first-child{border-top:0}.step.hot{padding:16px 18px 18px}}
+
+/* ---- 03 経歴のピース ---- */
+.prof-certs{margin-top:18px;font-size:12.5px;color:var(--text-mut);line-height:1.7}
+.prof-certs b{color:var(--text-dim);font-weight:700;margin-right:6px}
+.pieces-head{text-align:center;margin-top:76px}
+.pieces-head small{font-family:var(--font-en);font-size:12px;letter-spacing:.16em;color:var(--text-dim)}
+.pieces-head h3{font-size:clamp(20px,2.4vw,26px);font-weight:900;margin-top:6px}
+.pieces{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;margin-top:24px}
+.piece{border-top:1px solid var(--line-2);padding:20px 0 26px;min-width:0;display:flex;flex-direction:column}
+.pc-meta{display:flex;justify-content:space-between;gap:12px;font-family:var(--font-en);font-size:11.5px;font-weight:600;letter-spacing:.16em;color:var(--accent-soft)}
+.pc-meta span{color:var(--text-mut);letter-spacing:.06em;font-weight:400}
+.pc-org{margin-top:8px;font-size:16px;font-weight:900;line-height:1.5}
+.pc-org small{display:block;font-size:12px;color:var(--text-dim);font-weight:500}
+.pc-kpi{margin-top:14px}
+.pc-kpi small{display:block;font-size:12px;color:var(--text-dim)}
+.pc-kpi strong{display:block;font-family:var(--font-en);font-weight:800;font-size:clamp(34px,3.2vw,44px);line-height:1.15;margin-top:2px;white-space:nowrap}
+.pc-kpi strong em{font-style:normal;font-family:var(--font-ja);font-size:.4em;font-weight:700;margin-left:2px;color:var(--text)}
+.pc-kpi strong .tail{font-family:var(--font-ja);font-size:.34em;font-weight:700;color:var(--text-dim);margin-left:6px}
+.pc-subs{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:12px}
+.pc-subs div{min-width:0}
+.pc-subs small{display:block;font-size:11.5px;color:var(--text-mut)}
+.pc-subs b{display:block;font-family:var(--font-en);font-size:16px;font-weight:700;white-space:nowrap}
+.pc-subs b em{font-style:normal;font-family:var(--font-ja);font-size:11px;margin-left:1px}
+.pc-chart{margin-top:10px;max-width:320px}
+.pc-chart svg{display:block;width:100%;height:auto}
+.pc-desc{margin-top:12px;font-size:13px;color:var(--text-dim);line-height:1.75}
+.pc-desc+.pc-desc{margin-top:4px;font-size:12px}
+.pc-piece{margin-top:auto;padding-top:14px;font-size:13px;font-weight:700;color:var(--accent-soft)}
+.pieces-sum{margin-top:32px;text-align:center;font-size:clamp(17px,2vw,22px);font-weight:900;line-height:1.6}
+@media (max-width:900px){.pieces{grid-template-columns:1fr}}
+
+/* ---- 04 6つのパッケージ ---- */
+.pk-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+.cap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:40px;border-top:2px solid var(--navy)}
+.cap{padding:22px 22px 26px;min-width:0}
+.cap+.cap{border-left:1px solid var(--rule)}
+.cap:first-child{padding-left:0}
+.cap h3{background:var(--grad);color:#fff;font-size:20px;font-weight:900;line-height:1.4;letter-spacing:.08em;padding:10px 16px;border-radius:0}
+.cap-q{font-size:13px;color:var(--navy-mut);margin-top:10px}
+.cap ul{list-style:none;padding:0;margin:14px 0 0}
+.cap>ul>li{font-size:14.5px;font-weight:700;line-height:1.6;color:var(--navy);padding-top:12px;margin-top:12px;border-top:1px solid var(--rule)}
+.cap>ul>li:first-child{margin-top:0}
+.cap li ul{margin:4px 0 0}
+.cap li li{font-size:13px;font-weight:400;color:var(--navy-dim);line-height:1.7;margin:0}
+@media (max-width:1000px){.cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cap:nth-child(3){padding-left:0;border-left:0}.cap:nth-child(n+3){border-top:1px solid var(--rule)}}
+@media (max-width:560px){.cap-grid{grid-template-columns:1fr}.cap,.cap+.cap{padding-left:0;border-left:0}.cap+.cap{border-top:1px solid var(--rule)}}
+.ex-head{margin-top:64px;padding-top:28px;border-top:1px solid var(--rule)}
+.ex-head h3{font-size:clamp(20px,2.2vw,24px);font-weight:900}
+.ex-head p{font-size:14px;color:var(--navy-dim);margin-top:6px}
+@media (max-width:1000px){.cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.cap-grid{grid-template-columns:1fr}}
+.pk{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--radius);padding:22px 22px 20px;display:flex;flex-direction:column;min-width:0;scroll-margin-top:84px}
+.pk-tag{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px}
+.pk-tag span{font-weight:700;color:var(--accent-deep)}
+.pk-tag em{font-style:normal;font-size:11px;font-weight:700;color:var(--navy);border:1px solid var(--rule-2);border-radius:999px;padding:1px 9px;white-space:nowrap}
+.pk h3{font-size:clamp(21px,1.9vw,24px);font-weight:900;line-height:1.4;margin-top:10px;letter-spacing:.01em}
+.pk .benefit{font-size:15px;font-weight:700;line-height:1.6;margin-top:8px;color:var(--navy)}
+.pk .for{font-size:12.5px;color:var(--navy-mut);margin-top:6px}
+.pk .out{min-height:82px;margin-top:14px;padding:10px 12px;background:#fff4ec;border-radius:4px;font-size:13.5px;font-weight:700;line-height:1.6}
+.pk .out small{display:block;font-size:11px;font-weight:700;color:var(--accent-deep);letter-spacing:.06em}
+.pk .proof{font-size:12.5px;color:var(--navy-dim);margin-top:10px;line-height:1.65}
+.pk .proof b{color:var(--accent-deep)}
+.dia{margin-top:16px;border:1px solid var(--rule);border-radius:var(--radius);background:#fbfaf7}
+.dia svg{display:block;width:100%;height:auto}
+.ba{display:grid;grid-template-columns:3.6em minmax(0,1fr);margin:14px 0 0;font-size:13.5px}
+.ba dt,.ba dd{padding-block:8px;border-bottom:1px solid var(--rule)}
+.ba dt{font-size:11.5px;font-weight:700;color:var(--navy-mut);padding-top:10px}
+.ba dd{margin:0}
+.ba dd.before{color:var(--navy-dim)}
+.ba dd.after{font-weight:700;color:var(--navy)}
+.pk .term{font-size:12.5px;color:var(--navy-mut);margin-top:12px}
+.pk details{margin-top:8px}
+.pk summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--navy);list-style:none;display:flex;align-items:center;gap:8px}
+.pk summary::-webkit-details-marker{display:none}
+.pk summary::before{content:"";width:7px;height:7px;border-right:1.5px solid var(--accent-deep);border-bottom:1.5px solid var(--accent-deep);transform:rotate(-45deg);transition:transform .2s}
+.pk details[open] summary::before{transform:rotate(45deg)}
+.pk details p{font-size:13px;color:var(--navy-dim);margin-top:8px}
+.pk .btn{margin-top:auto;align-self:flex-start}
+.pk .cta{padding-top:16px;margin-top:auto}
+.pk .btn-outline{color:var(--navy);border-color:var(--rule-2)}
+.pk .btn-outline:hover{border-color:var(--accent-deep)}
+@media (max-width:1020px){.pk-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.pk-grid{grid-template-columns:1fr}.pk .out{min-height:0}}
+
+/* ---- キーメッセージ ---- */
+.key{background:var(--ink);position:relative;overflow:hidden}
+.key::after{content:"";position:absolute;width:620px;height:620px;right:-220px;bottom:-360px;border-radius:50%;background:radial-gradient(circle,rgba(255,110,20,.24),transparent 65%)}
+.key .wrap{position:relative;z-index:1;padding-block:clamp(64px,8vw,104px);text-align:center}
+.key small{font-size:15px;color:var(--text-dim)}
+.key h2{font-size:clamp(26px,3.8vw,44px);font-weight:900;line-height:1.5;margin-top:14px}
+.key hr{width:min(320px,60%);border:0;border-top:1px solid var(--line-2);margin:26px auto}
+.key p{color:var(--accent-soft);font-size:clamp(15px,1.7vw,18px);font-weight:700}
+
+/* ---- 05 想い ---- */
+.vision{background:var(--paper-2);color:var(--navy)}
+.vision-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 64px;align-items:start}
+.vision-grid{margin-top:14px}
+.vision h2{font-size:clamp(28px,3.4vw,42px);font-weight:900;line-height:1.3}
+.vision-sub{margin-top:16px;font-size:16px;font-weight:700}
+.vision-body{padding-top:.35em}
+.vision-body p{font-size:15.5px;line-height:2;color:var(--navy-dim)}
+.vision-body p+p{margin-top:16px}
+.vision-body .sign{margin-top:22px;font-size:13.5px;color:var(--navy)}
+.vows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:44px;border-top:1px solid var(--navy)}
+.vows div{padding:16px 20px 0 0;min-width:0}
+.vows div+div{padding-left:20px;border-left:1px solid var(--rule)}
+.vows b{display:block;font-size:16px;font-weight:900}
+.vows span{display:block;font-size:13.5px;color:var(--navy-dim);margin-top:4px}
+@media (max-width:900px){.vision-grid{grid-template-columns:1fr}.vows{grid-template-columns:1fr}.vows div+div{padding-left:0;border-left:0;border-top:1px solid var(--rule)}.vows div{padding-bottom:14px}}
+
+/* ---- 問い合わせ ---- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px 64px;align-items:start}
+.flow{margin-top:30px;border-top:1px solid var(--line-2)}
+.flow div{display:grid;grid-template-columns:3em minmax(0,1fr);gap:4px 14px;padding-block:16px;border-bottom:1px solid var(--line)}
+.flow i{font-style:normal;font-family:var(--font-en);font-size:13px;font-weight:700;color:var(--accent-soft);padding-top:2px}
+.flow b{display:block;font-size:15.5px}
+.flow span{display:block;font-size:13.5px;color:var(--text-dim)}
+form{display:grid;gap:16px;border:1px solid var(--line-2);border-radius:var(--radius);padding:clamp(20px,3vw,30px);background:var(--ink-2);min-width:0}
+form h3{font-size:18px;font-weight:900}
+label{font-size:13px;font-weight:700;display:grid;gap:7px}
+input,select,textarea{font:inherit;font-size:15px;color:var(--text);background:var(--ink);border:1px solid var(--line-2);border-radius:var(--radius);padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--accent-soft);outline:0}
+textarea{min-height:110px;resize:vertical}
+form .btn{width:100%}
+.hp-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;align-items:center;gap:10px;font-weight:500;font-size:13.5px}
+.consent input{width:18px;height:18px;padding:0;accent-color:var(--accent)}
+.consent a{color:var(--accent-soft);border-bottom:1px solid currentColor}
+.form-done{border:1px solid var(--line-2);border-radius:var(--radius);padding:clamp(20px,3vw,30px);background:var(--ink-2)}
+.form-done h3{font-size:18px;font-weight:900}
+.form-done p{margin-top:10px;font-size:14px;color:var(--text-dim)}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+.foot{border-top:1px solid var(--line);color:var(--text-mut);font-size:12px;background:var(--ink)}
+.foot .wrap{padding-block:22px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center}
+.foot img{height:24px;width:auto}
+
+</style>
 </head>
 <body>
 
-<!-- ========================================
-     Navigation
-     ======================================== -->
-<header class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#hero" class="brand" aria-label="オモシク 想いと仕組みで面白く トップへ">
-      <img class="brand-logo" src="images/logo-dark-trans.png" alt="オモシク 想いと仕組みで面白く" width="164" height="38">
-    </a>
 
-    <nav class="nav-links" id="navLinks" aria-label="メインナビゲーション">
-      <a href="#strengths">私たちの強み</a>
-      <a href="#services">サービス</a>
-      <a href="#cases">実績</a>
-      <a href="#about">代表について</a>
-      <a href="#method">メソッド</a>
-      <a href="#" class="is-placeholder" data-todo="blog">ブログ</a>
+<header class="nav">
+  <div class="wrap">
+    <img class="logo" src="images/logo-2026.png" alt="オモシク 想いと仕組みで面白く" width="138" height="32">
+    <nav aria-label="メインナビゲーション">
+      <a href="#service">私たちの支援</a>
+      <a href="#cred">実績と代表</a>
+      <a href="#packages">支援メニュー</a>
+      <a href="#vision">想い</a>
     </nav>
-
-    <div class="nav-cta">
-      <a href="#contact" class="btn btn-primary btn-sm">無料相談する<span class="btn-arrow">→</span></a>
-    </div>
-
-    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span><span></span>
-    </button>
+    <a class="btn btn-primary btn-sm" href="#contact">無料診断<span class="arw">→</span></a>
   </div>
 </header>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="メニューを閉じる">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-  </button>
-  <nav class="mobile-menu-nav" aria-label="モバイルナビゲーション">
-    <a href="#strengths">私たちの強み</a>
-    <a href="#services">サービス</a>
-    <a href="#cases">実績</a>
-    <a href="#method">メソッド</a>
-    <a href="#about">代表について</a>
-    <a href="#" class="is-placeholder" data-todo="blog">ブログ</a>
-    <a href="#contact" class="btn btn-primary mobile-menu-cta">何から始めるか相談する<span class="btn-arrow">→</span></a>
-  </nav>
-</div>
-
 <main>
-
-<!-- ========================================
-     01. Hero
-     ======================================== -->
-<section class="hero" id="hero">
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-orb hero-orb--1"></div>
-    <div class="hero-orb hero-orb--2"></div>
-    <div class="hero-orb hero-orb--3"></div>
-  </div>
-  <div class="hero-mesh" aria-hidden="true"></div>
-  <div class="hero-scanlines" aria-hidden="true"></div>
-  <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
-
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <div class="hero-chips">
+<!-- 01 FV -->
+<section class="hero" aria-label="ファーストビュー">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="chips">
         <span class="chip">戦略</span><span class="chip-x">×</span>
         <span class="chip">データ・AI</span><span class="chip-x">×</span>
         <span class="chip">システム</span><span class="chip-x">×</span>
         <span class="chip">定着</span>
       </div>
-      <h1 class="hero-title">
-        <span class="hl">人が主役で、</span>
-        <span class="hl"><span class="accent">成果と主体性</span>が回り続ける組織に。</span>
-      </h1>
-      <p class="hero-sub">
-        戦略から実装まで、一貫して伴走します。データ・AI・システムで売上や業務の課題を解決したい企業へ。外資コンサル・事業会社マーケ責任者・開発マネージャーを経た代表の西川が、課題の整理から開発、現場での活用・改善まで一貫して担当します。<br class="br-pc">目指すのは、成果が出て、現場が自分たちで改善を続けられる状態です。
-      </p>
-    </div>
-
-    <!-- ★ Orbit Diagram -->
-    <div class="hero-visual">
-      <div class="orbit" id="orbit">
-        <div class="orbit-glow" aria-hidden="true"></div>
-        <svg class="orbit-lines" viewBox="0 0 480 480" aria-hidden="true">
-          <circle class="orbit-track" cx="240" cy="240" r="180"/>
-          <g class="orbit-line-group">
-            <line class="orbit-line" x1="240" y1="240" x2="240" y2="60"/>
-            <line class="orbit-line" x1="240" y1="240" x2="411" y2="184"/>
-            <line class="orbit-line" x1="240" y1="240" x2="346" y2="386"/>
-            <line class="orbit-line" x1="240" y1="240" x2="134" y2="386"/>
-            <line class="orbit-line" x1="240" y1="240" x2="69" y2="184"/>
-          </g>
-        </svg>
-
-        <div class="orbit-core">
-          <span class="orbit-core-icon" aria-hidden="true">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="13"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="4"/></svg>
-          </span>
-          <span class="orbit-core-jp">成果と夢中</span>
-          <span class="orbit-core-en">RESULTS &amp; ENGAGEMENT</span>
-        </div>
-
-        <div class="orbit-ring" id="orbitRing">
-          <div class="orbit-node" style="--angle:-90deg">
-            <div class="orbit-node-inner">
-              <span class="orbit-node-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>
-              <span class="orbit-node-name">AI</span>
-              <span class="orbit-node-desc">自動化・高速化</span>
-            </div>
-          </div>
-          <div class="orbit-node" style="--angle:-18deg">
-            <div class="orbit-node-inner">
-              <span class="orbit-node-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span>
-              <span class="orbit-node-name">MARKETING</span>
-              <span class="orbit-node-desc">戦略・施策設計</span>
-            </div>
-          </div>
-          <div class="orbit-node" style="--angle:54deg">
-            <div class="orbit-node-inner">
-              <span class="orbit-node-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-              <span class="orbit-node-name">CRM</span>
-              <span class="orbit-node-desc">LTVの最大化</span>
-            </div>
-          </div>
-          <div class="orbit-node" style="--angle:126deg">
-            <div class="orbit-node-inner">
-              <span class="orbit-node-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9v9z"/><path d="M12 3a9 9 0 0 1 9 9h-9z" opacity=".55"/></svg></span>
-              <span class="orbit-node-name">DATA</span>
-              <span class="orbit-node-desc">分析・可視化</span>
-            </div>
-          </div>
-          <div class="orbit-node" style="--angle:198deg">
-            <div class="orbit-node-inner">
-              <span class="orbit-node-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M7 8l2 2-2 2M13 12h3"/></svg></span>
-              <span class="orbit-node-name">SYSTEM</span>
-              <span class="orbit-node-desc">実装・開発</span>
-            </div>
-          </div>
-        </div>
+      <h1><span class="p">売上・利益を伸ばす</span><span class="p">仕組みを、</span><br><span class="p"><span class="accent">戦略</span>から<span class="accent">実装</span>まで。</span></h1>
+      <p class="hero-sub">伸びを止めている所を見つけ、売上・利益にいちばん効く一手を、AI・データ・システムで形にします。戦略づくりから、現場で使える仕組みの実装・定着まで一貫して担当します。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#contact">無料の成長ボトルネック診断<span class="arw">→</span></a>
+        <a class="btn btn-outline btn-lg" href="#packages">支援メニューを見る<span class="arw">→</span></a>
       </div>
+      <p class="cta-note">60分・オンライン。1週間以内に、伸ばす数字・止めている所・3か月の一手を1枚のプランにしてお渡しします。</p>
     </div>
-
-    <div class="hero-cta-group">
-      <a href="#contact" class="btn btn-primary btn-lg magnetic" data-strength="0.25">何から始めるか相談する<span class="btn-arrow">→</span></a>
-      <a href="#proof" class="btn btn-outline btn-lg magnetic" data-strength="0.18">支援事例を見る<span class="btn-arrow">→</span></a>
-    </div>
-    <p class="hero-cta-note">初回相談は無料です。課題がまとまっていなくても構いません。</p>
-  </div>
-
-  <div class="scroll-indicator" aria-hidden="true"><span>SCROLL</span><div class="scroll-line"></div></div>
-</section>
-
-<!-- ========================================
-     01b. こんな状態から（旧 Pains を3項目に圧縮して前へ）
-     ======================================== -->
-<section class="section section-start" id="pains">
-  <div class="container">
-    <p class="start-label">こんな状態から、ご相談ください</p>
-    <ul class="start-list">
-      <li>データやAIを使いたいが、<b>何から手をつければよいか決まらない</b></li>
-      <li>システムを導入したのに、<b>現場では以前のやり方が続いている</b></li>
-      <li>改善を進めたいが、<b>経営・現場・開発をつなぐ担当者がいない</b></li>
-    </ul>
+    <aside class="who" aria-label="代表の経歴">
+      <p class="who-title"><b>代表が、戦略から実装まで一貫して担当</b>必要に応じて専門のパートナーと進めます</p>
+      <dl>
+        <div><dt>STRATEGY</dt><dd><b>経営の課題を、判断できる数字に</b><span>外資コンサルで、企業の戦略・データ・CRMを担当</span></dd></div>
+        <div><dt>BUSINESS</dt><dd><b>売上を伸ばす、事業側の経験</b><span>事業会社のマーケ責任者として、新規事業を初年度売上10億円規模へ</span></dd></div>
+        <div><dt>BUILD</dt><dd><b>決めた施策を、現場で使える形に</b><span>開発マネージャーとして、業務システムの自社開発とAI活用を推進</span></dd></div>
+      </dl>
+    </aside>
   </div>
 </section>
 
-<!-- ========================================
-     02. Our Approach（旧 02 Why DX fails + 03 Strengths を統合）
-     ======================================== -->
-<section class="section section-approach" id="strengths">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">OUR APPROACH</span>
-      <h2 class="section-title">仕組みだけでは、<br><span class="accent">DXは回らない</span></h2>
-      <p class="section-lead">技術課題と適応課題の両方に向き合う必要がある。</p>
+<!-- 02 What we do -->
+<section class="light sec" id="service" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="wwd">
+    <div class="wwd-head">
+      <p class="label">What we do</p>
+      <h2 class="h2" id="svc-title"><span class="p">経営・事業の</span><span class="p">成長レバレッジを見つけ、</span><br><span class="p">仕組みを実装します。</span></h2>
+      <p class="lead">AI・データ駆動で業務を再設計し、ビジネスインパクトをつくります。取り組む領域は、事業承継、セキュリティ、データドリブン経営、業務効率化、営業・マーケDXなどです。</p>
     </div>
-
-    <div class="approach-stack">
-      <article class="apc apc--reality">
-        <header class="apc-head"><span class="apc-num">01</span><span class="apc-line" aria-hidden="true"></span><span class="apc-tag">THE REALITY</span></header>
-        <div class="apc-reality">
-          <svg class="venn" viewBox="0 0 380 256" role="img" aria-label="技術課題と適応課題が重なり合う図">
-            <defs>
-              <pattern id="vennHatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="7" stroke="rgba(255,150,70,.7)" stroke-width="1.6"/>
-              </pattern>
-              <clipPath id="vennLeft"><circle cx="140" cy="110" r="86"/></clipPath>
-            </defs>
-            <circle class="venn-fill venn-fill--tech" cx="140" cy="110" r="86"/>
-            <circle class="venn-fill venn-fill--human" cx="240" cy="110" r="86"/>
-            <g clip-path="url(#vennLeft)">
-              <circle cx="240" cy="110" r="86" fill="rgba(255,110,20,.16)"/>
-              <circle cx="240" cy="110" r="86" fill="url(#vennHatch)"/>
-            </g>
-            <circle class="venn-ring venn-ring--tech" cx="140" cy="110" r="86"/>
-            <circle class="venn-ring venn-ring--human" cx="240" cy="110" r="86"/>
-            <g class="venn-ico venn-ico--tech" transform="translate(72,58) scale(2.05)">
-              <ellipse cx="10" cy="5" rx="7" ry="2.6"/><path d="M3 5v10c0 1.4 3.1 2.6 7 2.6.7 0 1.4 0 2-.1"/>
-              <path d="M3 10c0 1.4 3.1 2.6 7 2.6 1 0 1.9-.1 2.8-.2"/><circle cx="17" cy="15.5" r="2.3"/>
-              <path d="M17 11.2v1.4M17 18.4v1.4M12.7 15.5h1.4M19.9 15.5h1.4M14 12.5l1 1M20 18.5l1 1M20 12.5l-1 1M14 18.5l1-1"/>
-            </g>
-            <g class="venn-ico venn-ico--human" transform="translate(258,58) scale(2.05)">
-              <circle cx="12" cy="6.5" r="2.6"/><path d="M7.5 19v-2.2a4.5 4.5 0 0 1 9 0V19"/>
-              <circle cx="5" cy="9.5" r="2.1"/><path d="M1.5 19v-1.6a3.5 3.5 0 0 1 5.2-3"/>
-              <circle cx="19" cy="9.5" r="2.1"/><path d="M22.5 19v-1.6a3.5 3.5 0 0 0-5.2-3"/>
-            </g>
-            <text class="venn-label venn-label--tech" x="97" y="158" text-anchor="middle">技術課題</text>
-            <text class="venn-label venn-label--human" x="283" y="158" text-anchor="middle">適応課題</text>
-            <text class="venn-cap" x="97" y="222" text-anchor="middle"><tspan x="97" dy="0">システムやデータなど、</tspan><tspan x="97" dy="14">技術的に解決できる課題</tspan></text>
-            <text class="venn-cap" x="283" y="222" text-anchor="middle"><tspan x="283" dy="0">当事者が認識や関係性を</tspan><tspan x="283" dy="14">変えなければ解決しない課題</tspan></text>
-          </svg>
-          <p class="apc-reality-copy">現実の課題は、たいてい<span class="accent">この2つ</span>が混ざっている。<br><span class="apc-reality-sub">システムが動いても、仕事の進め方が変わらなければ使われない。</span></p>
-        </div>
-      </article>
-
-      <article class="apc apc--tech">
-        <header class="apc-head"><span class="apc-num">02</span><span class="apc-line" aria-hidden="true"></span><span class="apc-tag">TECHNICAL</span></header>
-        <div class="apc-issue">
-          <span class="apc-ico"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="10" cy="5" rx="7" ry="2.6"/><path d="M3 5v10c0 1.4 3.1 2.6 7 2.6.7 0 1.4 0 2-.1"/><path d="M3 10c0 1.4 3.1 2.6 7 2.6 1 0 1.9-.1 2.8-.2"/><circle cx="17" cy="15.5" r="2.3"/><path d="M17 11.2v1.4M17 18.4v1.4M12.7 15.5h1.4M19.9 15.5h1.4M14 12.5l1 1M20 18.5l1 1M20 12.5l-1 1M14 18.5l1-1"/></svg></span>
-          <div class="apc-issue-text">
-            <h3 class="apc-title">技術課題</h3>
-            <p class="apc-sub">要件・データ・開発・運用</p>
-            <p class="apc-desc">システムやデータなど、技術的に解決できる課題。</p>
-            <p class="apc-stalls-label">DXが止まるポイント</p>
-            <ul class="apc-stalls">
-              <li><span class="apc-stall-tag">始める前</span><span>必要な機能やデータが整理されず、開発を頼めない</span></li>
-              <li><span class="apc-stall-tag">作る間</span><span>データの形式が違い、システム同士をつなげられない</span></li>
-              <li><span class="apc-stall-tag">導入後</span><span>更新・保守の手順がなく、不具合に対応できない</span></li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="apc apc--human">
-        <header class="apc-head"><span class="apc-num">03</span><span class="apc-line" aria-hidden="true"></span><span class="apc-tag">HUMAN</span></header>
-        <div class="apc-issue">
-          <span class="apc-ico"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="2.6"/><path d="M7.5 19v-2.2a4.5 4.5 0 0 1 9 0V19"/><circle cx="5" cy="9.5" r="2.1"/><path d="M1.5 19v-1.6a3.5 3.5 0 0 1 5.2-3"/><circle cx="19" cy="9.5" r="2.1"/><path d="M22.5 19v-1.6a3.5 3.5 0 0 0-5.2-3"/></svg></span>
-          <div class="apc-issue-text">
-            <h3 class="apc-title">適応課題</h3>
-            <p class="apc-sub">意識・役割・関係性・習慣</p>
-            <p class="apc-desc">人の行動や組織のあり方など、簡単には正解がない課題。</p>
-            <p class="apc-stalls-label">DXが止まるポイント</p>
-            <ul class="apc-stalls">
-              <li><span class="apc-stall-tag">始める前</span><span>部門ごとに優先順位が違い、何から変えるか合意できない</span></li>
-              <li><span class="apc-stall-tag">作る間</span><span>決める人と使う人の認識がずれ、判断が進まない</span></li>
-              <li><span class="apc-stall-tag">導入後</span><span>使う目的や役割が共有されず、以前のやり方に戻ってしまう</span></li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <article class="apc apc--solution">
-        <header class="apc-head"><span class="apc-num">04</span><span class="apc-line" aria-hidden="true"></span><span class="apc-tag">OUR SOLUTION</span></header>
-        <h3 class="apc-solution-title">必要なのは、この3つを切らさずに、ひと続きで進めること。</h3>
-        <div class="apc-rows">
-          <a class="apc-row" href="#method-decide"><span class="apc-row-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.7 7.1L4 20l1-4.1A8 8 0 1 1 20 12z"/></svg></span><span class="apc-row-name">つなげて決める</span><span class="apc-row-sub">経営の狙いと、現場の仕事の流れと、作るものを一本につなぐ</span><svg class="apc-row-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
-          <a class="apc-row" href="#method-build"><span class="apc-row-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><span class="apc-row-name">見せながら作る</span><span class="apc-row-sub">動くものを早めに見せて、使う人と確かめながら形にする</span><svg class="apc-row-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
-          <a class="apc-row" href="#method-embed"><span class="apc-row-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5 20v-1.5a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5V20"/></svg></span><span class="apc-row-name">自分たちで回す</span><span class="apc-row-sub">手が離れても、現場が自分たちで回してよくしていける状態に</span><svg class="apc-row-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
-        </div>
-      </article>
+    <svg class="core-dia" viewBox="0 0 440 344" role="img" aria-label="AI・データ駆動を中心に、事業承継・データドリブン経営・営業マーケDX・業務効率化・セキュリティ・組織づくりの領域でビジネスインパクトをつくる図">
+      <g stroke="#c9c5bc" stroke-width="1">
+        <line x1="220" y1="160" x2="78" y2="46"/><line x1="220" y1="160" x2="362" y2="46"/>
+        <line x1="220" y1="160" x2="60" y2="160"/><line x1="220" y1="160" x2="380" y2="160"/>
+        <line x1="220" y1="160" x2="78" y2="274"/><line x1="220" y1="160" x2="362" y2="274"/>
+      </g>
+      <circle cx="220" cy="160" r="86" fill="#151826"/>
+      <circle cx="220" cy="160" r="86" fill="none" stroke="#ff6e16" stroke-width="1.5" stroke-dasharray="3 5"/>
+      <text x="220" y="132" text-anchor="middle" fill="#ffa867" font-size="10.5" font-weight="600" letter-spacing="2.5" font-family="Sora,sans-serif">CORE</text>
+      <text x="220" y="157" text-anchor="middle" fill="#f3efe9" font-size="16.5" font-weight="900" font-family="Noto Sans JP,sans-serif">AI・データ駆動</text>
+      <text x="220" y="178" text-anchor="middle" fill="rgba(243,239,233,.75)" font-size="11" font-family="Noto Sans JP,sans-serif">業務を再設計して</text>
+      <text x="220" y="198" text-anchor="middle" fill="#ffa867" font-size="12.5" font-weight="700" font-family="Noto Sans JP,sans-serif">ビジネスインパクトへ</text>
+      <g font-size="13" font-weight="700" fill="#151826" font-family="Noto Sans JP,sans-serif" text-anchor="middle">
+        <rect x="10" y="26" width="136" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="78" y="51">事業承継</text>
+        <rect x="284" y="26" width="154" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="361" y="51">データドリブン経営</text>
+        <rect x="0" y="140" width="134" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="67" y="165">営業・マーケDX</text>
+        <rect x="312" y="140" width="128" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="376" y="165">業務効率化</text>
+        <rect x="10" y="254" width="136" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="78" y="279">セキュリティ</text>
+        <rect x="294" y="254" width="136" height="40" rx="20" fill="#fff" stroke="#c9c5bc"/><text x="362" y="279">組織づくり</text>
+      </g>
+      <text x="220" y="334" text-anchor="middle" fill="#6b6f7d" font-size="11.5" font-family="Noto Sans JP,sans-serif">取り組む領域の例（課題に合わせて組み合わせます）</text>
+    </svg>
     </div>
-
-    <div class="approach-outcome">
-      <span class="approach-outcome-arrow" aria-hidden="true"></span>
-      <span class="section-label">OUR OUTCOME</span>
-      <p class="approach-outcome-copy">想いと仕組みをつなぎ、<br><span class="accent">現場で自走するところまで伴走する。</span></p>
-      <p class="approach-outcome-sub">つなげて決める・見せながら作る・自分たちで回す。代表の西川が、経営と現場の両方に関わりながら進めます。</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================
-     03. Proof（作って終わりにしない証拠・代表事例2件）
-     ======================================== -->
-<section class="section section-proof" id="proof">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">PROOF</span>
-      <h2 class="section-title">作って終わりにしない。<br><span class="accent">現場に残った</span>3つの例</h2>
-      <p class="section-lead">成果の数字だけでなく、「支援が終わった後、誰がどう回しているか」まで書いています。</p>
-    </div>
-    <div class="proof-grid">
-      <article class="proof-card">
-        <span class="case-tag">教育・コーチングサービス企業（社内AX推進）</span>
-        <h3 class="proof-title">SaaS依存の業務を自社開発に置き換え、運用まで現場で回る仕組みに</h3>
-        <dl class="proof-dl">
-          <dt>支援前</dt><dd>配信・EC・日々の業務がそれぞれ外部SaaSに依存し、月額費用が積み上がる一方で、業務の進め方はツールに合わせて歪んでいた。</dd>
-          <dt>担当したこと</dt><dd>まず業務プロセスを再設計し、そのうえでMA基盤・LINE配信基盤（BigQuery・Salesforce連携）・ECプラットフォーム・各種業務アプリを自社開発に置換。5名の開発チームを率いてAI駆動開発を定着させ、社内AIエージェントの導入・研修まで担当。</dd>
-          <dt>変わったこと</dt><dd>SaaS置換と業務再設計で<b>年間3,000万円以上のコスト削減</b>。AI駆動開発で開発の速度が上がり、<b>配信・分析・業務アプリの運用は現場担当が自分たちで回している</b>。</dd>
-          <dt>支援範囲</dt><dd>2025年9月〜現在。デジタル戦略本部のマネージャーとして担当（社内推進）。</dd>
-        </dl>
-      </article>
-      <article class="proof-card">
-        <span class="case-tag">B2B オフィス用品EC</span>
-        <h3 class="proof-title">サイト改善を、クライアント自身が回す体制に</h3>
-        <dl class="proof-dl">
-          <dt>支援前</dt><dd>改善案はあるが効果検証の型がなく、施策が単発で終わっていた。</dd>
-          <dt>担当したこと</dt><dd>GA4分析 → 施策の優先順位付け → KARTEでのABテスト設計。企画・施策管理の型と研修で内製化。</dd>
-          <dt>変わったこと</dt><dd>6施策中4施策でCVRが改善（有意差あり）。売上効果は月＋5,800万円（年換算＋7億円）。<b>支援終了の10ヶ月後、クライアント自身が活用事例としてセミナー登壇。</b></dd>
-          <dt>支援範囲</dt><dd>3ヶ月（2023年9〜11月）。代表の前職在籍時の担当実績。</dd>
-        </dl>
-      </article>
-      <article class="proof-card">
-        <span class="case-tag">外資メーカー D2C</span>
-        <h3 class="proof-title">分析も配信も、クライアント側で回せる体制に</h3>
-        <dl class="proof-dl">
-          <dt>支援前</dt><dd>売上は前年比−4%。データはあるが、分析も配信も外部頼みだった。</dd>
-          <dt>担当したこと</dt><dd>KPI設計とPower BI、サイトUI改善、LINE・メールのMA（シナリオ12本・50通以上）。分析ハンズオン研修とMA内製化フロー。</dd>
-          <dt>変わったこと</dt><dd>1年後に売上前年比＋35%、定期注文率28%→42%。<b>分析・配信をクライアント側で回せる体制になり、半年契約が2年間更新。</b></dd>
-          <dt>支援範囲</dt><dd>2023年12月〜2025年8月・単独常駐。代表の前職在籍時の担当実績。</dd>
-        </dl>
-      </article>
-    </div>
-    <p class="proof-note">※ 1件目は現在も務める企業内での担当実績、2・3件目は代表の前職（コンサルティングファーム在籍時）の担当実績です。社名は伏せています。数字は当時の報告値。</p>
-    <div class="section-foot"><a href="#cases" class="link-more">ほかのプロジェクト実績を見る<span class="btn-arrow">→</span></a></div>
-  </div>
-</section>
-
-<!-- ========================================
-     04. 解決できる課題（旧 Services + Themes を統合）
-     ======================================== -->
-<section class="section section-services" id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">WHAT WE SOLVE</span>
-      <h2 class="section-title">売上・判断・作業の課題を、<br><span class="accent">仕組みから</span>改善します</h2>
-      <p class="section-lead">「何を頼めばいいか分からない」でも大丈夫。3つのどれかに当てはまれば、課題の整理から一緒に始めます。</p>
-    </div>
-    <div class="service-grid">
-      <article class="service-card">
-        <span class="service-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-        <h3 class="service-jp">売上を伸ばす</h3>
-        <p class="service-desc">集客から購入、継続利用までを見直し、改善施策を実行します。</p>
-        <p class="service-ex">支援例</p>
-        <ul class="service-list">
-          <li>営業DX：ヨミ管理・営業ダッシュボード</li>
-          <li>マーケDX・CRM：LINE・メール施策、LTV改善</li>
-          <li>EC・D2C：広告・サイト改善・継続施策</li>
-        </ul>
-      </article>
-
-      <article class="service-card">
-        <span class="service-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="20" x2="6" y2="13"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="18" y1="20" x2="18" y2="4"/></svg></span>
-        <h3 class="service-jp">数字を判断に使う</h3>
-        <p class="service-desc">散らばったデータをまとめ、会議や日々の判断に使える形にします。</p>
-        <p class="service-ex">支援例</p>
-        <ul class="service-list">
-          <li>KPI設計と効果検証</li>
-          <li>データ基盤・ダッシュボード構築</li>
-          <li>販売・受注データの統合</li>
-        </ul>
-      </article>
-
-      <article class="service-card">
-        <span class="service-ico" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>
-        <h3 class="service-jp">日々の作業を減らす</h3>
-        <p class="service-desc">転記・集計・情報検索などを見直し、AIや業務アプリで効率化します。</p>
-        <p class="service-ex">支援例</p>
-        <ul class="service-list">
-          <li>業務アプリ開発（受注入力・申請・発注）</li>
-          <li>AIエージェント・自動化</li>
-          <li>内製化の研修・型づくり</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================
-     05. Method
-     ======================================== -->
-<section class="section section-method" id="method">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">METHOD</span>
-      <h2 class="section-title">成果が出るまでの<br><span class="accent">オモシクメソッド</span></h2>
-      <p class="section-lead">この3つを分業せず、同じ人間が最後まで持ちます。</p>
-    </div>
-
-    <ol class="method-list">
-      <li class="method-phase" id="method-decide" data-phase="decide">
-        <div class="method-phase-head">
-          <span class="method-phase-bar" aria-hidden="true"></span>
-          <span class="method-phase-name">つなげて決める</span>
-          <span class="method-phase-en">CONSULTING</span>
-        </div>
-        <div class="method-phase-main">
-          <p class="method-phase-note">戦略・仕事の流れ・作るものを一本につなぐ。必要なら、仕事の進め方から作り直す</p>
-          <ol class="method-steps">
-          <li class="method-step">
-            <span class="method-num">1</span>
-            <div class="method-body"><h3>解決する課題と、成果の測り方をそろえる</h3><p>経営の狙いと現場の仕事の流れを両方から聞き取り、優先順位・必要な機能・役割分担を整理します。必要なら仕事の進め方から組み直します。</p><p class="method-ask"><b>お客様側で:</b> 経営と現場のキーパーソンとの対話の時間（各1〜2時間×2〜3回）</p></div>
-          </li>
-          </ol>
-        </div>
-      </li>
-      <li class="method-phase" id="method-build" data-phase="build">
-        <div class="method-phase-head">
-          <span class="method-phase-bar" aria-hidden="true"></span>
-          <span class="method-phase-name">見せながら作る</span>
-          <span class="method-phase-en">ENGINEERING</span>
-        </div>
-        <div class="method-phase-main">
-          <p class="method-phase-note">動くものを早めに見せて、使う人と確かめながら形にする。ブラックボックスにしない</p>
-          <ol class="method-steps">
-          <li class="method-step">
-            <span class="method-num">2</span>
-            <div class="method-body"><h3>試作を使って確かめながら、仕組みにする</h3><p>動く試作を早い段階で見せ、実際に使う人の反応で直しながら本番へ。中身が見える形で作り、ブラックボックスにしません。</p><p class="method-ask"><b>お客様側で:</b> 実際に使う担当者による試作の確認（週1回程度）</p></div>
-          </li>
-          </ol>
-        </div>
-      </li>
-      <li class="method-phase" id="method-embed" data-phase="embed">
-        <div class="method-phase-head">
-          <span class="method-phase-bar" aria-hidden="true"></span>
-          <span class="method-phase-name">自分たちで回す</span>
-          <span class="method-phase-en">COACHING</span>
-        </div>
-        <div class="method-phase-main">
-          <p class="method-phase-note">担当・使い方・見直し方まで決める。私の手が離れても、現場がよくしていける状態まで</p>
-          <ol class="method-steps">
-          <li class="method-step">
-            <span class="method-num">3</span>
-            <div class="method-body"><h3>日々の業務に組み込み、効果を見て直す</h3><p>操作の説明だけでなく、担当者・運用ルール・振り返り方まで整えます。私の手が離れても、現場が数字を見て自分たちで直し、成果につなげていける状態まで。</p><p class="method-ask"><b>お客様側で:</b> 運用担当者の決定と、月1回の振り返りの場</p></div>
-          </li>
-          </ol>
-        </div>
-      </li>
+    <ol class="steps" style="list-style:none;padding:0;margin-bottom:0">
+      <li class="step hot"><i>01</i><em>60分・オンライン・無料</em><b>成長ボトルネック診断</b><span>売上・利益を客数・単価・継続・コストに分けて見ながら、伸びを止めている所と、手を打つといちばん効く所を一緒に見つけます。</span><a href="#contact">診断を申し込む →</a></li>
+      <li class="step"><i>02</i><em>1週間以内</em><b>サクセスプランのご提案</b><span>伸ばす数字・止めている所・最初の3か月の一手と体制を、1枚のプランにまとめます。支援の中身は、課題に合わせて組み立てます。</span><a href="#packages">支援の領域とメニュー例 ↓</a></li>
+      <li class="step"><i>03</i><em>3か月〜</em><b>伴走・実装</b><span>AI・データ駆動で業務を再設計し、施策と仕組みを形にします。効果を数字で確かめ、社内で回せる形にして手を離します。</span></li>
     </ol>
+    <p class="loop"><b>↻</b>03で測った結果から、次のボトルネックを見つけ直します。伸び続ける状態になるまで回します。プランに納得いただけた場合だけ、契約に進みます。</p>
   </div>
 </section>
 
-<!-- ========================================
-     06. About (CEO)
-     ======================================== -->
-<section class="section section-about" id="about">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">ABOUT</span>
-      <h2 class="section-title">なぜ、<span class="accent">私がやるのか。</span></h2>
+<!-- 03 実績と代表 -->
+<section class="cred sec" id="cred" aria-labelledby="cred-title">
+  <div class="wrap">
+    <div class="cred-head">
+      <p class="label">Why Omoshiku</p>
+      <h2 class="h2" id="cred-title"><span class="p"><span class="accent">外資コンサル品質</span>で、</span><span class="p">戦略と実装まで一気通貫で支援し、</span><br><span class="p">事業成長にコミットします。</span></h2>
     </div>
-
-    <div class="about-top">
-      <div class="about-photo">
-        <img src="images/profile-cutout.png" alt="オモシク代表 西川太雄" width="236" height="278" loading="lazy">
-      </div>
-      <div class="about-intro">
-        <span class="about-name-en">Takao Nishikawa</span>
-        <h3 class="about-name">西川 太雄</h3>
-        <p class="about-role">代表 / DXコンサルタント</p>
-        <p class="about-bio">外資コンサルで学び、事業会社で泥臭く実行し、AI時代の開発を現場で実践している。だから、机上の空論ではなく、成果が出るまで伴走できる。</p>
-      </div>
-    </div>
-
-    <div class="about-cards">
-      <div class="about-card">
-        <span class="about-card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5"/></svg></span>
-        <h4>外資コンサルで学ぶ</h4>
-        <p>戦略・マーケティング・データ分野を体系的に習得。</p>
-      </div>
-      <div class="about-card">
-        <span class="about-card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg></span>
-        <h4>事業会社で実行する</h4>
-        <p>マーケティング責任者として、売上・組織・プロダクト成長を牽引。</p>
-      </div>
-      <div class="about-card">
-        <span class="about-card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>
-        <h4>開発チームを率いて作る</h4>
-        <p>開発マネージャーとして5名のチームを率い、業務アプリ・MA・ダッシュボードを自ら実装。AI駆動開発も現場で実践。</p>
-      </div>
-      <div class="about-card">
-        <span class="about-card-ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></span>
-        <h4>伴走して成果をつくる</h4>
-        <p>戦略から実装、定着まで一貫して伴走し、成果までコミット。</p>
-      </div>
-    </div>
-
-    <div class="about-story">
-      <h3 class="about-story-title">『想いと仕組みで、<span class="accent">おもしろく。</span>』</h3>
-      <p class="about-story-lead">仕組みは、人を縛るためにあるのではなく、組織と人の想いを形にするためにある。</p>
-      <p class="about-story-body">現場に想いはあるのに、仕組みがそれを止めている——営業でも、コンサルでも、事業会社でも、そういう場面を何度も見てきました。</p>
-      <p class="about-story-body">学生時代ずっと、自分には才能がないと思い、もがき苦しんでいました。でも大人になって分かったのは、才能がないのではなく、才能の活かし方が間違っていただけだということ、そして、努力が報われないのは人の問題ではなく、努力の構造のズレやムダの問題だということでした。想いはあるのに、仕組みや組織の構造がそれを殺している場面を、営業でも、コンサルでも、事業会社でも、何度も見てきました。</p>
-      <p class="about-story-body">だから私は、想いと仕組みのあいだに立ちます。経営の言葉を現場の言葉に、現場の熱を経営の判断に。戦略・データ・AI・システムは全部そのための道具です。人が主役で、成果と夢中が回り続ける組織を、一緒につくらせてください。</p>
-      <p class="about-story-sign">合同会社オモシク 代表　<span class="about-story-sign-name">西川 太雄</span></p>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================
-     07. Cases (元HPの実プロジェクト踏襲)
-     ======================================== -->
-<section class="section section-cases" id="cases">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">CASE STUDIES</span>
-      <h2 class="section-title">プロジェクト<span class="accent">実績</span></h2>
-      <p class="section-lead">成果につながったプロジェクト</p>
-    </div>
-
-    <div class="case-grid">
-      <article class="case-card">
-        <span class="case-tag">D2C / 事業会社</span>
-        <h3 class="case-title">某D2Cブランド — 売上0→10億円のグロース貢献</h3>
-        <p class="case-desc">新サービス立ち上げとマーケ推進を行い、初年度10億円に貢献（MVP受賞）。戦略策定から広告運用・CRM構築・データ分析まで一気通貫で。</p>
-        <div class="case-chips"><span>戦略設計</span><span>広告運用</span><span>CRM構築</span><span>データ分析</span></div>
-      </article>
-
-      <article class="case-card">
-        <span class="case-tag">食品EC</span>
-        <h3 class="case-title">某食品EC企業 — LTV 140%改善</h3>
-        <p class="case-desc">ロイヤル化しやすい顧客の購買パターンをデータで特定。サイト改善とメール／LINEシナリオ実装でLTVを140%に改善。</p>
-        <div class="case-chips"><span>購買データ分析</span><span>サイト改善</span><span>LINE/メール施策</span><span>LTV改善</span></div>
-      </article>
-
-      <article class="case-card">
-        <span class="case-tag">小売</span>
-        <h3 class="case-title">某小売チェーン — データドリブン経営の実現</h3>
-        <p class="case-desc">店舗ごとにバラバラだったデータをBigQueryに統合し、リアルタイムダッシュボードを構築。意思決定スピードと在庫最適化による利益率改善を実現。</p>
-        <div class="case-chips"><span>BQ構築</span><span>ダッシュボード</span><span>在庫最適化</span><span>経営支援</span></div>
-      </article>
-
-      <article class="case-card">
-        <span class="case-tag">サブスク</span>
-        <h3 class="case-title">某サブスクサービス — 広告ROAS 3倍改善</h3>
-        <p class="case-desc">Meta・Google広告のデータをBigQueryに統合し、クリエイティブ×オーディエンス分析を自動化。勝ちパターン特定と予算配分最適化でROAS 3倍を達成。</p>
-        <div class="case-chips"><span>広告分析</span><span>ROAS改善</span><span>データ統合</span><span>自動レポート</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================
-     08. How to start（相談から支援開始まで・費用の目安・体制）
-     ======================================== -->
-<section class="section section-flow" id="flow">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-label">HOW TO START</span>
-      <h2 class="section-title">まず課題を整理し、<br><span class="accent">支援範囲</span>を決めます</h2>
-      <p class="section-lead">いきなり大きな契約にはなりません。相談→提案→開始の3段階で、範囲・期間・費用を見てから決められます。</p>
-    </div>
-    <ol class="flow-steps">
-      <li><span class="flow-num">1</span><div><h3>初回相談（無料・60分）</h3><p>現在の状況と、変えたいことを伺います。課題がまとまっていなくて構いません。</p></div></li>
-      <li><span class="flow-num">2</span><div><h3>ご提案</h3><p>取り組む課題、進め方、期間、費用を1枚にしてお渡しします。ここで見送っていただいても構いません。</p></div></li>
-      <li><span class="flow-num">3</span><div><h3>支援開始</h3><p>役割分担と成果の確認方法を合意して進めます。</p></div></li>
-    </ol>
-    <div class="flow-facts">
-      <div class="flow-fact"><span class="k">担当体制</span><p>代表の西川が、相談から実装・定着まで一貫して担当します。</p></div>
-      <div class="flow-fact"><span class="k">対応範囲</span><p>支援終了後の保守・改修は、継続支援または都度対応でお受けします。</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ========================================
-     10. Final CTA + Contact form
-     ======================================== -->
-<section class="section section-cta" id="contact">
-  <div class="cta-bg" aria-hidden="true"><div class="cta-orb cta-orb--1"></div><div class="cta-orb cta-orb--2"></div></div>
-  <div class="container cta-content">
-    <img class="cta-logo" src="images/logo-dark-trans.png" alt="オモシク 想いと仕組みで面白く" width="360" height="83">
-    <div class="contact-head">
-      <h2 class="contact-title">いま困っていることを、<span class="accent">そのまま</span>お聞かせください。</h2>
-      <p class="contact-lead">相談するために、課題をまとめる必要はありません。「AIを使いたいが、用途が決まっていない」「導入したシステムが使われない」といった段階からご相談いただけます。代表の西川が内容を確認し、<b>2営業日以内</b>にご連絡します。初回相談は無料です。</p>
-    </div>
-
-    <!-- Contact Form (GAS) -->
-    <form class="contact-form" id="contactForm" novalidate>
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="formName">お名前 <span class="required">*</span></label>
-          <input type="text" id="formName" name="name" autocomplete="name" required placeholder="山田 太郎">
+    <div class="prof">
+      <div class="prof-photo"><img src="images/profile-2026.png" alt="代表 西川太雄の写真" width="777" height="910"></div>
+      <div>
+        <p class="prof-en">Takao Nishikawa</p>
+        <p class="prof-role">合同会社オモシク 代表<b>西川 太雄</b></p>
+        <div class="prof-hist">
+          <p>リサーチ会社の法人営業から始まり、事業会社で<b>新規事業の立ち上げとマーケティング</b>、外資コンサルで<b>戦略とデータ・CRM</b>、事業会社で<b>開発とAI活用</b>を担ってきました。</p>
+          <p>営業・事業・戦略・実装。遠回りに見えた経歴が、いまは全部、事業を伸ばすためのピースになっています。調べる、決める、つくる、現場に根づかせる、を分業せずに1人で通します。</p>
+          <p>合同会社オモシクの代表として、経営の課題とAI・データ活用をつなぎ、売上・利益が伸び続ける仕組みづくりを支援しています。</p>
         </div>
-        <div class="form-group">
-          <label for="formEmail">メールアドレス <span class="required">*</span></label>
-          <input type="email" id="formEmail" name="email" autocomplete="email" required placeholder="example@company.com">
-        </div>
+        <p class="prof-certs"><b>資格</b>JCC認知科学コーチング認定／基本情報技術者／PMP／統計検定2級／G検定／Salesforce Marketing Cloud 認定／Tableau データアナリスト</p>
       </div>
-      <div class="form-group form-group--full">
-        <label for="formMessage">ご相談内容 <span class="required">*</span></label>
-        <textarea id="formMessage" name="message" rows="5" required placeholder="分かる範囲で、困っていること・現在のやり方・変えたいことをご記入ください。"></textarea>
-      </div>
-      <div class="form-hp" aria-hidden="true">
-        <input type="text" name="website" tabindex="-1" autocomplete="off">
-      </div>
-      <div class="form-consent">
-        <label class="consent-label">
-          <input type="checkbox" id="formConsent" required>
-          <span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span>
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary btn-lg form-submit" id="formSubmit">
-        相談内容を送信する<span class="btn-arrow">→</span>
-      </button>
-    </form>
+    </div>
 
-    <div class="form-success" id="formSuccess" hidden>
-      <span class="success-ico" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
-      <h3>お問い合わせありがとうございます</h3>
-      <p>2営業日以内にご連絡いたします。</p>
+    <div class="pieces-head"><small>Experience &amp; Results</small><h3>経歴と主な実績</h3></div>
+    <div class="pieces">
+      <article class="piece">
+        <p class="pc-meta">01 BUSINESS<span>2019–2022</span></p>
+        <p class="pc-org">事業会社<small>新規事業・マーケティング責任者</small></p>
+        <div class="pc-kpi"><small>新サービスの初年度売上</small><strong><span class="accent">10</span><em>億円</em><span class="tail">に貢献</span></strong></div>
+        <div class="pc-subs">
+          <div><small>獲得単価（CAC）</small><b>▲70<em>%</em></b></div>
+          <div><small>年間LTV</small><b>12→16<em>万円</em></b></div>
+          <div><small>月次解約率</small><b>10→6<em>%</em></b></div>
+        </div>
+        <p class="pc-desc">立ち上げから広告・CRM・データ分析まで一貫して推進。MVPを受賞。</p>
+        <p class="pc-piece">→ 事業を自分で伸ばした経験</p>
+      </article>
+      <article class="piece">
+        <p class="pc-meta">02 STRATEGY<span>2022–2025</span></p>
+        <p class="pc-org">外資コンサル<small>Data &amp; CRM アソシエイトマネージャー</small></p>
+        <div class="pc-kpi"><small>メーカーのD2C・1年間の支援</small><strong><span class="tail" style="margin:0 6px 0 0">売上</span><span class="accent">+7</span><em>億円</em><span class="tail">に貢献</span></strong></div>
+        <div class="pc-chart"><svg viewBox="0 0 360 116" role="img" aria-label="売上の推移。前年21億円、支援開始時20億円、1年後27億円で前年比プラス35%">
+          <g font-family="Sora,Noto Sans JP,sans-serif" text-anchor="middle">
+            <path d="M44 60L180 70" stroke="rgba(243,239,233,.45)" stroke-width="2"/>
+            <path d="M180 70L316 24" stroke="#ff6e16" stroke-width="2.5"/>
+            <circle cx="44" cy="60" r="6" fill="rgba(243,239,233,.7)"/>
+            <circle cx="180" cy="70" r="6" fill="#0a0a14" stroke="#f3efe9" stroke-width="2"/>
+            <circle cx="316" cy="24" r="7" fill="#ff6e16"/>
+            <g font-size="13" font-weight="700" fill="#f3efe9"><text x="44" y="46">21億円</text><text x="180" y="56">20億円</text><text x="316" y="12">27億円</text></g>
+            <g font-size="11.5" fill="rgba(243,239,233,.72)" font-family="Noto Sans JP,sans-serif"><text x="44" y="98">前年</text><text x="180" y="98">支援開始時</text><text x="316" y="98">1年後</text></g>
+            <text x="316" y="113" font-size="11.5" font-weight="700" fill="#ffa867">前年比 +35%</text>
+          </g></svg></div>
+        <div class="pc-subs">
+          <div><small>新規顧客のLTV</small><b>+42<em>%</em></b></div>
+          <div><small>定期注文率</small><b>28→42<em>%</em></b></div>
+        </div>
+        <p class="pc-desc">戦略・施策の実行から、データ活用の内製化まで担当。</p>
+        <p class="pc-desc">別事例: B2B EC のサイト改善で、売上効果 年換算 +7億円（6施策中4施策でCVR改善）</p>
+        <p class="pc-piece">→ 戦略とデータ・CRMの型</p>
+      </article>
+      <article class="piece">
+        <p class="pc-meta">03 BUILD<span>2025–</span></p>
+        <p class="pc-org">事業会社<small>開発マネージャー・AX推進</small></p>
+        <div class="pc-kpi"><small>SaaSツール費用</small><strong><span class="accent">年3,000</span><em>万円</em><span class="tail">削減</span></strong></div>
+        <p class="pc-desc">5名の開発チームを率い、業務アプリ・MA基盤を自社で開発。業務の再設計から、運用の定着まで推進。</p>
+        <p class="pc-piece">→ 決めたことを仕組みにし、現場に残す力</p>
+      </article>
+    </div>
+    <p class="pieces-sum"><span class="p">事業・戦略・実装。</span><span class="p">3つを1人で持つから、</span><br><span class="p">課題から成果まで、</span><span class="p">分けずに通せます。</span></p>
+    <p class="fine">※ 代表の前職・現職での担当実績です。各成果は組織・チームでの取り組みによるもので、社名は伏せています。</p>
+  </div>
+</section>
+
+<!-- 04 6つの支援メニュー -->
+<section class="light sec" id="packages" aria-labelledby="pk-title">
+  <div class="wrap">
+    <p class="label">Services</p>
+    <h2 class="h2" id="pk-title"><span class="p">成長のボトルネックに合わせて、</span><span class="p">支援を組み立てます。</span></h2>
+    <p class="lead">診断で伺った課題に合わせて、次の4つの層から必要なものを組み合わせ、個別にご提案します。決めるだけ、つくるだけで終わらせず、社内で回る所まで支援します。</p>
+    <div class="cap-grid">
+      <div class="cap"><h3>戦略</h3><p class="cap-q">どこで伸ばすかを決める</p>
+        <ul><li>経営戦略<ul><li>中期計画・投資判断</li><li>事業承継・経営の見える化</li></ul></li><li>事業戦略<ul><li>成長ボトルネックの特定</li><li>新規事業の立ち上げ</li></ul></li><li>組織・人材戦略<ul><li>理念・MVVづくり</li><li>組織・役割の設計</li></ul></li><li>DX・AI戦略<ul><li>DX・AIのロードマップ</li><li>投資対効果の見立て</li></ul></li></ul></div>
+      <div class="cap"><h3>設計</h3><p class="cap-q">どう伸ばすかを設計する</p>
+        <ul><li>データドリブン経営<ul><li>KPIツリーの設計</li><li>ダッシュボードの設計</li></ul></li><li>顧客戦略・CRM<ul><li>LTV最大化</li><li>顧客分析・セグメント設計</li></ul></li><li>業務設計<ul><li>業務の棚卸し</li><li>業務の再設計</li></ul></li><li>セキュリティ・ガバナンス<ul><li>セキュリティ診断</li><li>AI・クラウドの利用ルール</li></ul></li></ul></div>
+      <div class="cap"><h3>実装</h3><p class="cap-q">仕組みを形にする</p>
+        <ul><li>AI活用<ul><li>業務へのAIの組み込み</li><li>AIエージェント・自動化</li></ul></li><li>データ活用<ul><li>データ基盤の整備</li><li>分析・レポートの自動化</li></ul></li><li>システム開発<ul><li>業務アプリの内製開発</li><li>MA・CRMの導入と運用</li></ul></li></ul></div>
+      <div class="cap"><h3>定着</h3><p class="cap-q">社内で回る状態にする</p>
+        <ul><li>人材育成<ul><li>生成AI活用研修</li><li>デジタル・AI人材の育成</li></ul></li><li>組織づくり<ul><li>認知科学コーチング</li><li>主体性が回るチームづくり</li></ul></li><li>運用設計<ul><li>手順書・運用ルール</li><li>引き継ぎ・内製化</li></ul></li><li>効果測定<ul><li>KPIのモニタリング</li><li>改善の伴走</li></ul></li></ul></div>
+    </div>
+
+    <div class="ex-head"><h3>支援メニューの例</h3><p>よくあるご相談を、成果と期間が分かる形にまとめた一例です。「AI業務活用スタート」と「セキュリティ診断」は、成果物が決まった短期のパッケージです。</p></div>
+
+    <div class="pk-grid">
+
+      <!-- 経営データドリブン -->
+      <article class="pk" id="pkg-data">
+        <p class="pk-tag"><span>経営</span><em>月次で伴走</em></p>
+        <h3>経営データドリブン化</h3>
+        <p class="benefit">KPIの設計から始め、数字で先を読み、会議で次の一手を決められる経営にする</p>
+        <p class="for">経営者・経営企画・事業責任者へ</p>
+        <p class="out"><small>つくる成果</small>KPIツリーと経営ダッシュボード、予実と打ち手の試算で決める会議</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまは月次の集計を待って先月の結果を振り返るだけ。後は売上・利益を客数・単価・継続に分けたKPIツリーで、動きの原因と打ち手の効果を見て決める">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">3か月後</text>
+            <rect x="12" y="32" width="124" height="86" rx="3" fill="#e9e6df"/>
+            <g font-size="10.5" fill="#4a4d5c"><text x="22" y="54">月次報告（Excel）</text><text x="22" y="78">集計に2週間</text><text x="22" y="102">先月の結果だけ</text></g>
+            <text x="12" y="142" font-size="10.5" fill="#4a4d5c">振り返るだけの会議</text>
+            <path d="M146 74h24" stroke="#c94a10" stroke-width="1.5"/><path d="M166 69l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <rect x="196" y="30" width="72" height="22" rx="3" fill="#ff6e16"/><text x="232" y="45" font-size="10.5" font-weight="700" fill="#fff" text-anchor="middle">売上・利益</text>
+            <g stroke="#151826" stroke-width="1" fill="none"><path d="M232 52v8"/><path d="M203 60h58"/><path d="M203 60v8"/><path d="M232 60v8"/><path d="M261 60v8"/></g>
+            <g font-size="9.5" fill="#151826" text-anchor="middle">
+              <rect x="189" y="68" width="28" height="20" rx="2" fill="#fff" stroke="#151826"/><text x="203" y="82">客数</text>
+              <rect x="218" y="68" width="28" height="20" rx="2" fill="#fff" stroke="#151826"/><text x="232" y="82">単価</text>
+              <rect x="247" y="68" width="28" height="20" rx="2" fill="#fff" stroke="#151826"/><text x="261" y="82">継続</text>
+            </g>
+            <path d="M282 88l8-8 7 4 11-14" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <text x="186" y="112" font-size="9.5" fill="#4a4d5c">週次で更新し、打ち手を試算</text>
+            <text x="186" y="142" font-size="10.5" font-weight="700" fill="#151826">数字で次の一手を決める</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">集計に時間がかかり、会議は先月の結果を振り返るだけ</dd><dt>後</dt><dd class="after">KPIの動きから原因を追い、打ち手の効果を試算して決められる</dd></dl>
+        <p class="proof">進め方: 売上・利益をKPIツリーに分けて追う指標を決める → 散らばったデータをつなぎ、経営ダッシュボードを作る → 予実と打ち手の試算を、毎月の会議の進め方に組み込む</p>
+        <p class="term">期間: 最初の3か月でKPI設計・データの統合・ダッシュボード。その後は月次で、予実と打ち手の検証を伴走</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="経営データドリブン化">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
+
+      <!-- AI・データ活用 -->
+      <article class="pk" id="pkg-ai">
+        <p class="pk-tag"><span>AI・データ活用</span><em>短期・定額</em></p>
+        <h3>AI業務活用スタート</h3>
+        <p class="benefit">毎月の集計・資料づくりをAIに任せ、人は判断と顧客対応に集中する</p>
+        <p class="for">部門長・経営企画へ</p>
+        <p class="out"><small>つくる成果</small>選んだ1業務の作業時間を、半分以下に（目標）</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまは集計・転記・資料作成を人が全部手作業。後はAIが集計と転記を処理し、人は確認だけ">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">導入後</text>
+            <g font-size="11" fill="#4a4d5c">
+              <rect x="12" y="32" width="112" height="24" rx="3" fill="#e9e6df"/><text x="22" y="48">集計</text><text x="114" y="48" text-anchor="end" font-size="10">人</text>
+              <rect x="12" y="62" width="112" height="24" rx="3" fill="#e9e6df"/><text x="22" y="78">転記</text><text x="114" y="78" text-anchor="end" font-size="10">人</text>
+              <rect x="12" y="92" width="112" height="24" rx="3" fill="#e9e6df"/><text x="22" y="108">資料作成</text><text x="114" y="108" text-anchor="end" font-size="10">人</text>
+            </g>
+            <text x="12" y="138" font-size="10.5" fill="#4a4d5c">全部、人の手作業</text>
+            <path d="M136 74h34" stroke="#c94a10" stroke-width="1.5"/><path d="M166 69l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <g font-size="11">
+              <rect x="186" y="32" width="122" height="24" rx="3" fill="#ff6e16"/><text x="196" y="48" fill="#fff" font-weight="700">集計</text><text x="298" y="48" text-anchor="end" fill="#fff" font-size="10" font-weight="700">AI</text>
+              <rect x="186" y="62" width="122" height="24" rx="3" fill="#ff6e16"/><text x="196" y="78" fill="#fff" font-weight="700">転記</text><text x="298" y="78" text-anchor="end" fill="#fff" font-size="10" font-weight="700">AI</text>
+              <rect x="186" y="92" width="122" height="24" rx="3" fill="#fff" stroke="#151826"/><text x="196" y="108" fill="#151826" font-weight="700">確認・判断</text><text x="298" y="108" text-anchor="end" fill="#151826" font-size="10" font-weight="700">人</text>
+            </g>
+            <text x="186" y="138" font-size="10.5" font-weight="700" fill="#151826">人は確認と顧客対応へ</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">集計や資料の下書きに、毎月何十時間もかかる</dd><dt>後</dt><dd class="after">選んだ1業務をAIが処理し、人は確認するだけに</dd></dl>
+        <p class="term">成果物: 動く仕組み・運用手順・削減時間の測定</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="AI業務活用スタート">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
+
+      <!-- SaaS内製化 -->
+      <article class="pk" id="pkg-saas">
+        <p class="pk-tag"><span>業務・コスト</span><em>月次で伴走</em></p>
+        <h3>SaaSツール内製化</h3>
+        <p class="benefit">増え続けるSaaSの月額を、自社で直せる仕組みに置き換えて下げる</p>
+        <p class="for">経営者・業務の責任者・情報システムへ</p>
+        <p class="out"><small>つくる成果</small>SaaS費用の削減と、業務に合わせて社内で直せる仕組み</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまはSaaSを4つ契約し、それぞれに月額がかかり、合わない所は手作業で埋めている。後は自社の仕組み1つにまとめ、費用が下がる">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">置き換え後</text>
+            <g font-size="10" fill="#4a4d5c">
+              <rect x="12" y="32" width="58" height="22" rx="3" fill="#e9e6df"/><text x="20" y="47">SaaS A</text>
+              <rect x="76" y="32" width="58" height="22" rx="3" fill="#e9e6df"/><text x="84" y="47">SaaS B</text>
+              <rect x="12" y="60" width="58" height="22" rx="3" fill="#e9e6df"/><text x="20" y="75">SaaS C</text>
+              <rect x="76" y="60" width="58" height="22" rx="3" fill="#e9e6df"/><text x="84" y="75">SaaS D</text>
+              <text x="12" y="104">それぞれに月額と手作業</text>
+            </g>
+            <text x="12" y="142" font-size="10.5" fill="#4a4d5c">使わない機能にも払う</text>
+            <path d="M146 74h24" stroke="#c94a10" stroke-width="1.5"/><path d="M166 69l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <rect x="186" y="30" width="122" height="30" rx="3" fill="#ff6e16"/><text x="247" y="50" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">自社の仕組み</text>
+            <g font-size="9.5" fill="#4a4d5c"><text x="186" y="88">いま</text><text x="186" y="112">後</text></g>
+            <rect x="214" y="79" width="94" height="11" rx="2" fill="#c9c5bc"/>
+            <rect x="214" y="103" width="38" height="11" rx="2" fill="#151826"/>
+            <text x="258" y="112" font-size="9.5" font-weight="700" fill="#151826">費用</text>
+            <text x="186" y="142" font-size="10.5" font-weight="700" fill="#151826">必要な機能だけ持つ</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">ツールごとに月額がかかり、業務に合わない所は手作業で埋めている</dd><dt>後</dt><dd class="after">業務に合った仕組みを社内で持ち、変更も自分たちでできる</dd></dl>
+        <p class="proof">実績例: SaaSの自社開発への置き換えで<b>年3,000万円超を削減</b>（代表の現職での担当実績）</p>
+        <p class="term">期間: 3〜6か月。費用の大きいツール1つから始めることも可</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="SaaSツール内製化">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
+
+      <!-- 社外CTO・CDO -->
+      <article class="pk" id="pkg-advisor">
+        <p class="pk-tag"><span>経営×デジタル</span><em>月次・顧問</em></p>
+        <h3>社外CTO・CDO（顧問）</h3>
+        <p class="benefit">デジタル・AIの判断を経営者の隣で一緒に行い、投資の空振りを減らす</p>
+        <p class="for">社内にCTO・CDOがいない経営者・事業責任者へ</p>
+        <p class="out"><small>つくる成果</small>DX・AI投資の優先順位と、社内で進められる推進体制</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまはベンダーの提案がばらばらに届き、比べる物差しがない。顧問の後は、売上に効く順に投資の優先順位が決まる">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">顧問の後</text>
+            <g font-size="10.5" fill="#4a4d5c">
+              <rect x="12" y="32" width="84" height="22" rx="3" fill="#e9e6df"/><text x="20" y="47">A社の提案</text>
+              <rect x="40" y="62" width="84" height="22" rx="3" fill="#e9e6df"/><text x="48" y="77">B社の提案</text>
+              <rect x="20" y="92" width="84" height="22" rx="3" fill="#e9e6df"/><text x="28" y="107">新しいツール</text>
+            </g>
+            <text x="12" y="138" font-size="10.5" fill="#4a4d5c">比べる物差しがない</text>
+            <path d="M136 74h34" stroke="#c94a10" stroke-width="1.5"/><path d="M166 69l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <g font-size="11">
+              <rect x="186" y="32" width="122" height="24" rx="3" fill="#ff6e16"/><text x="196" y="48" fill="#fff" font-weight="700">1. 売上に効く投資</text>
+              <rect x="186" y="62" width="122" height="24" rx="3" fill="#fff" stroke="#151826"/><text x="196" y="78" fill="#151826" font-weight="700">2. 業務の再設計</text>
+              <rect x="186" y="92" width="122" height="24" rx="3" fill="#e9e6df"/><text x="196" y="108" fill="#626571">3. いまは見送り</text>
+            </g>
+            <text x="186" y="138" font-size="10.5" font-weight="700" fill="#151826">投資の順番が決まる</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">ベンダーの提案を比べる人がおらず、ツールだけが増える</dd><dt>後</dt><dd class="after">投資の優先順位が決まり、社内のチームが自分たちで進められる</dd></dl>
+        <p class="proof">代表は事業会社で開発マネージャーとして5名のチームを率い、AX推進を担当（現職）</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="社外CTO・CDO（顧問）">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
+
+      <!-- 営業・マーケ -->
+      <article class="pk" id="pkg-sales">
+        <p class="pk-tag"><span>営業・マーケティング</span><em>月次で伴走</em></p>
+        <h3>LTV最大化（データ・CRM）</h3>
+        <p class="benefit">新規獲得だけに頼らず、顧客が買い続ける仕組みで売上を伸ばす</p>
+        <p class="for">事業部長・マーケ責任者・営業部長へ</p>
+        <p class="out"><small>つくる成果</small>顧客1人あたりの売上（LTV）・継続率・獲得単価の改善</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまは初回購入の後に多くの顧客が離れる。後は購買データをもとにLINEやメールで次の一手を打ち、2回目・3回目の購入が増えてLTVが上がる">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">6か月後</text>
+            <path d="M12 112h120" stroke="#c9c5bc" stroke-width="1"/>
+            <g fill="#c9c5bc"><rect x="20" y="40" width="26" height="72" rx="2"/><rect x="58" y="90" width="26" height="22" rx="2"/><rect x="96" y="102" width="26" height="10" rx="2"/></g>
+            <g font-size="9" fill="#4a4d5c" text-anchor="middle"><text x="33" y="125">1回目</text><text x="71" y="125">2回目</text><text x="109" y="125">3回目</text></g>
+            <text x="12" y="142" font-size="10.5" fill="#4a4d5c">初回で離れていく</text>
+            <path d="M146 74h24" stroke="#c94a10" stroke-width="1.5"/><path d="M166 69l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <path d="M186 112h122" stroke="#c9c5bc" stroke-width="1"/>
+            <g fill="#ff6e16"><rect x="194" y="40" width="26" height="72" rx="2"/><rect x="232" y="62" width="26" height="50" rx="2"/><rect x="270" y="74" width="26" height="38" rx="2"/></g>
+            <g font-size="9" fill="#151826" text-anchor="middle"><text x="207" y="125">1回目</text><text x="245" y="125">2回目</text><text x="283" y="125">3回目</text></g>
+            <text x="300" y="40" font-size="10" font-weight="900" fill="#c94a10" text-anchor="end">LTV↑</text>
+            <text x="186" y="142" font-size="10.5" font-weight="700" fill="#151826">買い続ける顧客が増える</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">広告で獲得しても、初回購入のあと多くの顧客が離れていく</dd><dt>後</dt><dd class="after">購買データでLINE・メールの次の一手を打ち、2回目・3回目が増える</dd></dl>
+        <p class="proof">実績例: D2Cで<b>新規顧客のLTV +42%</b>、定期注文率 28%→42%（代表の前職での担当実績）</p>
+        <p class="term">期間: 3か月で分析・設計・配信を1巡、その後は運用と内製化を伴走</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="LTV最大化（データ・CRM）">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
+
+      <!-- セキュリティ -->
+      <article class="pk" id="pkg-sec">
+        <p class="pk-tag"><span>セキュリティ</span><em>短期・定額</em></p>
+        <h3>セキュリティ診断</h3>
+        <p class="benefit">クラウド・SaaS・AIの使い方を点検し、情報が漏れないルールと設定に整える</p>
+        <p class="for">経営者・情報システム・総務へ</p>
+        <p class="out"><small>つくる成果</small>リスク一覧と優先順位、利用ルールと設定基準がそろい、全社で安心してツールを使える状態</p>
+        <div class="dia"><svg viewBox="0 0 320 150" role="img" aria-label="いまは社員がばらばらのクラウド・SaaS・AIに情報を入れ、外に出ている可能性がある。後は社内ルールを通して、認めたツールだけを使う">
+          <g font-family="Noto Sans JP,sans-serif">
+            <text x="12" y="20" font-size="10.5" font-weight="700" fill="#626571">いま</text>
+            <text x="186" y="20" font-size="10.5" font-weight="700" fill="#c94a10">診断後</text>
+            <g fill="#9a9ca6"><circle cx="24" cy="46" r="7"/><circle cx="24" cy="76" r="7"/><circle cx="24" cy="106" r="7"/></g>
+            <g stroke="#9a9ca6" stroke-width="1" stroke-dasharray="3 3" fill="none"><path d="M32 46L96 36"/><path d="M32 46L104 72"/><path d="M32 76L90 98"/><path d="M32 106L104 72"/><path d="M32 106L98 120"/></g>
+            <g fill="#e9e6df" stroke="#c9c5bc"><rect x="96" y="28" width="22" height="16" rx="2"/><rect x="104" y="64" width="22" height="16" rx="2"/><rect x="90" y="90" width="22" height="16" rx="2"/><rect x="98" y="112" width="22" height="16" rx="2"/></g>
+            <text x="140" y="54" font-size="14" font-weight="900" fill="#9a9ca6">?</text>
+            <text x="12" y="142" font-size="10.5" fill="#4a4d5c">誰が何を入れたか不明</text>
+            <path d="M150 76h22" stroke="#c94a10" stroke-width="1.5"/><path d="M168 71l6 5-6 5" fill="none" stroke="#c94a10" stroke-width="1.5"/>
+            <g fill="#151826"><circle cx="198" cy="46" r="7"/><circle cx="198" cy="76" r="7"/><circle cx="198" cy="106" r="7"/></g>
+            <g stroke="#151826" stroke-width="1"><path d="M206 46L238 70"/><path d="M206 76L238 76"/><path d="M206 106L238 82"/></g>
+            <rect x="238" y="40" width="20" height="72" rx="2" fill="#ff6e16"/>
+            <text x="248" y="80" font-size="9.5" font-weight="700" fill="#fff" text-anchor="middle" writing-mode="tb" glyph-orientation-vertical="0">ルール</text>
+            <g stroke="#151826" stroke-width="1"><path d="M258 64L282 52"/><path d="M258 88L282 100"/></g>
+            <g fill="#fff" stroke="#151826"><rect x="282" y="42" width="26" height="18" rx="2"/><rect x="282" y="92" width="26" height="18" rx="2"/></g>
+            <g font-size="9" font-weight="700" fill="#151826" text-anchor="middle"><text x="295" y="55">OK</text><text x="295" y="105">OK</text></g>
+            <text x="186" y="142" font-size="10.5" font-weight="700" fill="#151826">認めたツールだけ使う</text>
+          </g></svg></div>
+        <dl class="ba"><dt>いま</dt><dd class="before">誰が、どのクラウド・SaaS・AIに、何の情報を入れているか分からない</dd><dt>後</dt><dd class="after">使ってよいツール・入れてよい情報・設定の基準を全社で共有</dd></dl>
+        <p class="term">成果物: リスク一覧・利用ルール（AIを含む）・設定基準・説明会</p>
+        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="セキュリティ診断">このメニューで相談<span class="arw">→</span></a></div>
+      </article>
     </div>
   </div>
 </section>
 
+<!-- 05 想い -->
+<section class="vision sec" id="vision" aria-labelledby="vision-title">
+  <div class="wrap">
+    <p class="label" style="color:var(--accent-deep)">Vision</p>
+    <div class="vision-grid">
+      <div>
+        <h2 id="vision-title"><span class="p">会社の想いと強みを</span><span class="p">技術でつなぎ、</span><span class="p">伸び続ける</span><span class="p">仕組みにする。</span></h2>
+        <p class="vision-sub"><span class="p">DXは手段です。</span><span class="p">目指すのは、</span><span class="p">売上・利益・主体性が</span><span class="p">回り続けること。</span></p>
+      </div>
+      <div class="vision-body">
+        <p>想いはあるのに、仕組みがそれを止めている。営業でも、コンサルでも、事業会社でも、そんな場面を何度も見てきました。足りないのは才能ではなく、努力の向きと仕組みが合っていないだけのことが多い、というのが私の実感です。</p>
+        <p>AI・データは、人を置き換えるためではなく、人の想いと会社の強みを輝かせるために使います。伸びを止めている所を経営者と一緒に見つけて外し、伸び続ける会社を一社ずつ増やしていきます。</p>
+        <p class="sign">合同会社オモシク 代表　西川 太雄</p>
+      </div>
+    </div>
+    <div class="vows">
+      <div><b>数字に、責任を持つ</b><span>何を作ったかでなく、売上と利益がどう動いたかで仕事を測ります。</span></div>
+      <div><b>自分たちで回せる形で、残す</b><span>支援が終わった後も、社内で直し、広げられる状態で手を離します。</span></div>
+      <div><b>人の強みが活きる仕事に変える</b><span>人を仕組みに合わせるのでなく、人の強みが出る仕組みをつくります。</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 問い合わせ -->
+<section class="sec" id="contact" aria-labelledby="contact-title" style="background:var(--ink)">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="label">Free diagnosis</p>
+      <h2 class="h2" id="contact-title"><span class="p">無料の成長ボトルネック診断で、</span><span class="p">最初の3か月の</span><span class="p">サクセスプランを。</span></h2>
+      <p class="lead" style="color:var(--text-dim)">オンラインでお話を伺い、1週間以内に、伸ばす数字・伸びを止めている所・3か月の一手を1枚にまとめてご提案します。課題がまとまっていなくても構いません。</p>
+      <div class="flow">
+        <div><i>01</i><p><b>成長ボトルネック診断（60分・オンライン）</b><span>売上・利益を分けて見ながら、伸びを止めている所を一緒に探します</span></p></div>
+        <div><i>02</i><p><b>サクセスプランのご提案（1週間以内）</b><span>伸ばす数字・止めている所・3か月の一手と体制を1枚にまとめます</span></p></div>
+        <div><i>03</i><p><b>伴走の開始</b><span>プランに納得いただけた場合だけ、契約に進みます</span></p></div>
+      </div>
+    </div>
+    <form id="contactForm" novalidate>
+      <h3>成長ボトルネック診断（無料）の申し込み</h3>
+      <label for="f-topic">気になっているメニュー
+        <select id="f-topic" name="category">
+          <option>まだ決まっていない</option>
+          <option>経営データドリブン化</option>
+          <option>AI業務活用スタート</option>
+          <option>SaaSツール内製化</option>
+          <option>社外CTO・CDO（顧問）</option>
+          <option>LTV最大化（データ・CRM）</option>
+          <option>セキュリティ診断</option>
+        </select>
+      </label>
+      <label for="f-name">お名前（必須）<input id="f-name" name="name" autocomplete="name" required placeholder="山田 太郎"></label>
+      <label for="f-co">会社名（任意）<input id="f-co" name="company" autocomplete="organization" placeholder="株式会社〇〇"></label>
+      <label for="f-mail">メールアドレス（必須）<input id="f-mail" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label>
+      <label for="f-body">いま気になっていること（任意）<textarea id="f-body" name="message" placeholder="例: 事業を継いで2年。どこに投資すべきか整理したい"></textarea></label>
+      <div class="hp-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <label class="consent"><input type="checkbox" id="f-consent" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する</span></label>
+      <button class="btn btn-primary btn-lg" type="submit" id="formSubmit">成長ボトルネック診断を申し込む<span class="arw">→</span></button>
+      </form>
+    <div class="form-done" id="formSuccess" hidden><h3>お申し込みありがとうございます</h3><p>内容を確認のうえ、2営業日以内にメールでご連絡します。お急ぎの場合は info@omoshiku.jp まで直接ご連絡ください。</p></div>
+  </div>
+</section>
 </main>
 
-<!-- ========================================
-     Footer
-     ======================================== -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img class="brand-logo footer-logo" src="images/logo-dark-trans.png" alt="オモシク 想いと仕組みで面白く" width="198" height="46">
-    </div>
-    <nav class="footer-links" aria-label="フッターナビゲーション">
-      <a href="#strengths">私たちの強み</a>
-      <a href="#services">サービス</a>
-      <a href="#cases">実績</a>
-      <a href="#about">代表について</a>
-      <a href="#method">メソッド</a>
-      <a href="#" class="is-placeholder" data-todo="blog">ブログ</a>
-      <a href="#" class="is-placeholder" data-todo="recruit">採用情報</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-      <a href="tokushouhou.html">特定商取引法に基づく表記</a>
-    </nav>
-    <div class="footer-social">
-      <a href="#" class="is-placeholder" data-todo="sns" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H8v-2.9h2.4V9.8c0-2.4 1.4-3.7 3.6-3.7 1 0 2.1.2 2.1.2v2.3h-1.2c-1.2 0-1.5.7-1.5 1.4v1.7h2.6L15.6 15h-2.2v7A10 10 0 0 0 22 12z"/></svg></a>
-      <a href="#" class="is-placeholder" data-todo="sns" aria-label="X"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.3 8.3L23 22h-6.6l-5.2-6.8L5.3 22H2l7.8-8.9L1.5 2h6.8l4.7 6.2L18.9 2zm-1.2 18h1.7L7.4 3.7H5.6L17.7 20z"/></svg></a>
-      <a href="#" class="is-placeholder" data-todo="sns" aria-label="LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6zM8.3 18.3H5.5V9.7h2.8v8.6zM6.9 8.5a1.6 1.6 0 1 1 0-3.3 1.6 1.6 0 0 1 0 3.3zm11.4 9.8h-2.8v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H9.7V9.7h2.7v1.2h.1a3 3 0 0 1 2.7-1.5c2.9 0 3.4 1.9 3.4 4.3v4.6z"/></svg></a>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Omoshiku. All Rights Reserved.</p>
-    </div>
-  </div>
+<footer class="foot">
+  <div class="wrap"><img src="images/logo-2026.png" alt="オモシク" width="103" height="24"><span>© 合同会社オモシク　<a href="privacy.html">プライバシーポリシー</a> ／ <a href="tokushouhou.html">特定商取引法に基づく表記</a></span></div>
 </footer>
 
+
+<script>
+(function(){
+  var sel=document.getElementById('f-topic');
+  document.querySelectorAll('[data-topic]').forEach(function(a){
+    a.addEventListener('click',function(){sel.value=a.getAttribute('data-topic');});
+  });
+  var GAS_URL="https://script.google.com/macros/s/AKfycbwtBBI9W8HUZjdVbp5W7Lb_wwMSkryeN34sFA5-va9233YIRt8ast_xRiQY5gXdSFjl/exec";
+  var form=document.getElementById('contactForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(form.website&&form.website.value)return;
+    if(!form.checkValidity()){form.reportValidity();return;}
+    var btn=document.getElementById('formSubmit'),orig=btn.innerHTML;
+    btn.disabled=true;btn.innerHTML='送信中...';
+    var get=function(n){var el=form.querySelector('[name="'+n+'"]');return el?el.value:'';};
+    var data={name:get('name'),email:get('email'),company:get('company'),phone:'',category:'成長ボトルネック診断: '+get('category'),message:get('message')};
+    fetch(GAS_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(data)})
+      .then(function(){form.hidden=true;var ok=document.getElementById('formSuccess');ok.hidden=false;ok.scrollIntoView({behavior:'smooth',block:'center'});})
+      .catch(function(){btn.disabled=false;btn.innerHTML=orig;alert('送信に失敗しました。お手数ですが info@omoshiku.jp まで直接ご連絡ください。');});
+  });
+})();
+</script>
 </body>
 </html>
