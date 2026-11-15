@@ -192,11 +192,11 @@ h1,h2,h3,h4{word-break:auto-phrase;line-break:strict;text-wrap:balance}
 .cap+.cap{border-left:1px solid var(--rule)}
 .cap:first-child{padding-left:0}
 .cap h3{background:var(--grad);color:#fff;font-size:20px;font-weight:900;line-height:1.4;letter-spacing:.08em;padding:10px 16px;border-radius:0}
-.cap-q{font-size:13px;color:var(--navy-mut);margin-top:10px}
-.cap ul{list-style:none;padding:0;margin:14px 0 0}
+.cap-q{font-size:13px;color:var(--navy-mut);margin-top:10px;padding-left:16px}
+.cap ul{list-style:none;padding:0 0 0 16px;margin:14px 0 0}
 .cap>ul>li{font-size:14.5px;font-weight:700;line-height:1.6;color:var(--navy);padding-top:12px;margin-top:12px;border-top:1px solid var(--rule)}
 .cap>ul>li:first-child{margin-top:0}
-.cap li ul{margin:4px 0 0}
+.cap li ul{margin:4px 0 0;padding-left:0}
 .cap li li{font-size:13px;font-weight:400;color:var(--navy-dim);line-height:1.7;margin:0}
 @media (max-width:1000px){.cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cap:nth-child(3){padding-left:0;border-left:0}.cap:nth-child(n+3){border-top:1px solid var(--rule)}}
 @media (max-width:560px){.cap-grid{grid-template-columns:1fr}.cap,.cap+.cap{padding-left:0;border-left:0}.cap+.cap{border-top:1px solid var(--rule)}}
@@ -290,6 +290,35 @@ form .btn{width:100%}
 .foot .wrap{padding-block:22px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;align-items:center}
 .foot img{height:24px;width:auto}
 
+/* ---- スマホ（iPhone 17 の幅 402px を基準に、375〜430px を想定） ---- */
+@media (max-width:640px){
+  /* 1画面ずつ区切りよく止まる（近くに来た時だけ吸い付く） */
+  html{scroll-snap-type:y proximity}
+  .hero,.sec{scroll-snap-align:start;scroll-margin-top:68px}
+  .wwd,.steps,.prof-photo,.prof>div:last-child,.pieces-head,.piece,.pieces-sum,.cap,.ex-head,.pk,.vows,#contactForm{scroll-snap-align:start;scroll-margin-top:92px}
+  .sec{padding-block:72px}
+  /* FV は1画面ぶん */
+  .hero-grid{min-height:calc(100svh - 68px);padding-block:48px 56px}
+  .hero-sub .p{display:inline-block}
+  /* 揃え方は左に統一 */
+  .cred-head,.pieces-head,.pieces-sum,.fine{text-align:left}
+  .cred-head .h2{font-size:25px}
+  .pieces-sum br{display:none}
+  .pieces-sum .p{display:inline-block}
+  /* 写真と図は全幅 */
+  .prof{margin-top:36px;gap:28px}
+  .prof-photo{max-width:none;width:100%;aspect-ratio:1/1}
+  .core-dia{max-width:none;width:100%;justify-self:stretch}
+  /* ブロックの間隔をそろえる */
+  .pieces-head{margin-top:72px}
+  .pieces{margin-top:20px}
+  .piece{padding:24px 0 28px}
+  .cap,.cap+.cap,.cap:first-child{padding:28px 0 32px}
+  .ex-head{margin-top:40px;padding-top:32px}
+  .pk-grid{gap:24px;margin-top:28px}
+  .pk{padding:22px 20px 24px}
+  .vows{margin-top:40px}
+}
 </style>
 </head>
 <body>
@@ -487,7 +516,6 @@ form .btn{width:100%}
         <dl class="ba"><dt>いま</dt><dd class="before">集計に時間がかかり、会議は先月の結果を振り返るだけ</dd><dt>後</dt><dd class="after">KPIの動きから原因を追い、打ち手の効果を試算して決められる</dd></dl>
         <p class="proof">進め方: 売上・利益をKPIツリーに分けて追う指標を決める → 散らばったデータをつなぎ、経営ダッシュボードを作る → 予実と打ち手の試算を、毎月の会議の進め方に組み込む</p>
         <p class="term">期間: 最初の3か月でKPI設計・データの統合・ダッシュボード。その後は月次で、予実と打ち手の検証を伴走</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="経営データドリブン化">このメニューで相談<span class="arw">→</span></a></div>
       </article>
 
       <!-- AI・データ活用 -->
@@ -517,7 +545,6 @@ form .btn{width:100%}
           </g></svg></div>
         <dl class="ba"><dt>いま</dt><dd class="before">集計や資料の下書きに、毎月何十時間もかかる</dd><dt>後</dt><dd class="after">選んだ1業務をAIが処理し、人は確認するだけに</dd></dl>
         <p class="term">成果物: 動く仕組み・運用手順・削減時間の測定</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="AI業務活用スタート">このメニューで相談<span class="arw">→</span></a></div>
       </article>
 
       <!-- SaaS内製化 -->
@@ -550,7 +577,6 @@ form .btn{width:100%}
         <dl class="ba"><dt>いま</dt><dd class="before">ツールごとに月額がかかり、業務に合わない所は手作業で埋めている</dd><dt>後</dt><dd class="after">業務に合った仕組みを社内で持ち、変更も自分たちでできる</dd></dl>
         <p class="proof">実績例: SaaSの自社開発への置き換えで<b>年3,000万円超を削減</b>（代表の現職での担当実績）</p>
         <p class="term">期間: 3〜6か月。費用の大きいツール1つから始めることも可</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="SaaSツール内製化">このメニューで相談<span class="arw">→</span></a></div>
       </article>
 
       <!-- 社外CTO・CDO -->
@@ -580,7 +606,6 @@ form .btn{width:100%}
           </g></svg></div>
         <dl class="ba"><dt>いま</dt><dd class="before">ベンダーの提案を比べる人がおらず、ツールだけが増える</dd><dt>後</dt><dd class="after">投資の優先順位が決まり、社内のチームが自分たちで進められる</dd></dl>
         <p class="proof">代表は事業会社で開発マネージャーとして5名のチームを率い、AX推進を担当（現職）</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="社外CTO・CDO（顧問）">このメニューで相談<span class="arw">→</span></a></div>
       </article>
 
       <!-- 営業・マーケ -->
@@ -608,7 +633,6 @@ form .btn{width:100%}
         <dl class="ba"><dt>いま</dt><dd class="before">広告で獲得しても、初回購入のあと多くの顧客が離れていく</dd><dt>後</dt><dd class="after">購買データでLINE・メールの次の一手を打ち、2回目・3回目が増える</dd></dl>
         <p class="proof">実績例: D2Cで<b>新規顧客のLTV +42%</b>、定期注文率 28%→42%（代表の前職での担当実績）</p>
         <p class="term">期間: 3か月で分析・設計・配信を1巡、その後は運用と内製化を伴走</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="LTV最大化（データ・CRM）">このメニューで相談<span class="arw">→</span></a></div>
       </article>
 
       <!-- セキュリティ -->
@@ -639,7 +663,6 @@ form .btn{width:100%}
           </g></svg></div>
         <dl class="ba"><dt>いま</dt><dd class="before">誰が、どのクラウド・SaaS・AIに、何の情報を入れているか分からない</dd><dt>後</dt><dd class="after">使ってよいツール・入れてよい情報・設定の基準を全社で共有</dd></dl>
         <p class="term">成果物: リスク一覧・利用ルール（AIを含む）・設定基準・説明会</p>
-        <div class="cta"><a class="btn btn-outline btn-md" href="#contact" data-topic="セキュリティ診断">このメニューで相談<span class="arw">→</span></a></div>
       </article>
     </div>
   </div>
